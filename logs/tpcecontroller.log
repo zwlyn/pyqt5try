@@ -1,0 +1,486 @@
+2019-09-18 15:18:05,122     INFO [                  work.py     create_startBox   118] <class 'int'>
+2019-09-18 15:18:05,123     INFO [                  work.py     create_startBox   118] <class 'list'>
+2019-09-18 15:18:05,123     INFO [                  work.py     create_startBox   118] <class 'int'>
+2019-09-18 15:18:05,123     INFO [                  work.py     create_startBox   118] <class 'int'>
+2019-09-18 15:18:05,124     INFO [                  work.py     create_startBox   118] <class 'int'>
+2019-09-18 15:18:05,124     INFO [                  work.py     create_startBox   118] <class 'dict'>
+2019-09-18 15:18:05,124     INFO [                  work.py     create_startBox   118] <class 'int'>
+2019-09-18 15:19:29,517     INFO [                  work.py     create_startBox   118] <class 'int'>
+2019-09-18 15:19:29,518     INFO [                  work.py     create_startBox   118] <class 'dict'>
+2019-09-18 15:19:29,518     INFO [                  work.py     create_startBox   122] {'port': 3307, 'username': 'root', 'dbname': 'mysql', 'ip': '192.168.3.79', 'dbtype': 'mysql', 'password': '123456'}
+2019-09-18 15:19:29,518     INFO [                  work.py     create_startBox   118] <class 'int'>
+2019-09-18 15:19:29,519     INFO [                  work.py     create_startBox   118] <class 'int'>
+2019-09-18 15:19:29,519     INFO [                  work.py     create_startBox   118] <class 'int'>
+2019-09-18 15:19:29,519     INFO [                  work.py     create_startBox   118] <class 'int'>
+2019-09-18 15:19:29,519     INFO [                  work.py     create_startBox   118] <class 'list'>
+2019-09-18 15:19:29,519     INFO [                  work.py     create_startBox   122] [{'port': 4290, 'delay': 0, 'startid': 1, 'instance': 1, 'ip': '192.168.3.79', 'endid': 1000, 'concurrency': 5}]
+2019-09-18 15:21:33,738     INFO [                  work.py     create_startBox   118] <class 'int'>
+2019-09-18 15:21:33,739     INFO [                  work.py     create_startBox   118] <class 'int'>
+2019-09-18 15:21:33,739     INFO [                  work.py     create_startBox   118] <class 'int'>
+2019-09-18 15:21:33,739     INFO [                  work.py     create_startBox   118] <class 'list'>
+2019-09-18 15:21:33,739     INFO [                  work.py     create_startBox   122] [{'ip': '192.168.3.79', 'endid': 1000, 'startid': 1, 'delay': 0, 'instance': 1, 'port': 4290, 'concurrency': 5}]
+2019-09-18 15:23:03,863     INFO [                  work.py     create_startBox   118] <class 'int'>
+2019-09-18 15:23:03,865     INFO [                  work.py     create_startBox   118] <class 'dict'>
+2019-09-18 15:23:03,865     INFO [                  work.py     create_startBox   122] {'username': 'root', 'ip': '192.168.3.79', 'dbname': 'mysql', 'port': 3307, 'password': '123456', 'dbtype': 'mysql'}
+2019-09-18 15:23:03,866     INFO [                  work.py     create_startBox   118] <class 'int'>
+2019-09-18 15:23:03,866     INFO [                  work.py     create_startBox   118] <class 'int'>
+2019-09-18 15:23:03,866     INFO [                  work.py     create_startBox   118] <class 'int'>
+2019-09-18 15:23:03,866     INFO [                  work.py     create_startBox   118] <class 'int'>
+2019-09-18 15:23:03,867     INFO [                  work.py     create_startBox   118] <class 'list'>
+2019-09-18 15:23:03,867     INFO [                  work.py     create_startBox   122] [{'endid': 1000, 'delay': 0, 'startid': 1, 'ip': '192.168.3.79', 'instance': 1, 'port': 4290, 'concurrency': 5}]
+2019-09-18 15:26:57,252     INFO [                  work.py     create_startBox   118] <class 'int'>
+2019-09-18 15:26:57,253     INFO [                  work.py     create_startBox   122] 1000
+2019-09-18 15:27:26,872     INFO [                  work.py     create_startBox   118] <class 'int'>
+2019-09-18 15:27:26,873     INFO [                  work.py     create_startBox   118] <class 'int'>
+2019-09-18 15:27:26,873     INFO [                  work.py     create_startBox   118] <class 'int'>
+2019-09-18 15:27:26,873     INFO [                  work.py     create_startBox   118] <class 'int'>
+2019-09-18 15:27:26,873     INFO [                  work.py     create_startBox   118] <class 'list'>
+2019-09-18 15:27:26,873     INFO [                  work.py     create_startBox   128] [{'startid': 1, 'port': 4290, 'concurrency': 5, 'endid': 1000, 'ip': '192.168.3.79', 'delay': 0, 'instance': 1}]
+2019-09-18 15:27:26,874     INFO [                  work.py     create_startBox   118] <class 'int'>
+2019-09-18 15:27:26,874     INFO [                  work.py     create_startBox   118] <class 'dict'>
+2019-09-18 15:27:26,874     INFO [                  work.py     create_startBox   122] {'port': 3307, 'username': 'root', 'dbtype': 'mysql', 'ip': '192.168.3.79', 'password': '123456', 'dbname': 'mysql'}
+2019-09-18 15:29:11,514     INFO [                  work.py     create_startBox   118] <class 'int'>
+2019-09-18 15:29:11,514     INFO [                  work.py     create_startBox   118] <class 'int'>
+2019-09-18 15:29:11,515     INFO [                  work.py     create_startBox   118] <class 'list'>
+2019-09-18 15:29:11,515     INFO [                  work.py     create_startBox   128] [{'startid': 1, 'delay': 0, 'endid': 1000, 'concurrency': 5, 'ip': '192.168.3.79', 'port': 4290, 'instance': 1}]
+2019-09-18 15:29:11,515     INFO [                  work.py     create_startBox   118] <class 'int'>
+2019-09-18 15:29:11,515     INFO [                  work.py     create_startBox   118] <class 'dict'>
+2019-09-18 15:29:11,515     INFO [                  work.py     create_startBox   122] {'username': 'root', 'password': '123456', 'dbname': 'mysql', 'ip': '192.168.3.79', 'port': 3307, 'dbtype': 'mysql'}
+2019-09-18 15:29:11,515     INFO [                  work.py     create_startBox   118] <class 'int'>
+2019-09-18 15:29:11,516     INFO [                  work.py     create_startBox   118] <class 'int'>
+2019-09-18 15:29:49,014     INFO [                  work.py     create_startBox   118] {'ip': '192.168.3.79', 'port': 3307, 'dbtype': 'mysql', 'username': 'root', 'password': '123456', 'dbname': 'mysql'}
+2019-09-18 15:29:49,015     INFO [                  work.py     create_startBox   118] 60
+2019-09-18 15:29:49,015     INFO [                  work.py     create_startBox   118] 1000
+2019-09-18 15:29:49,015     INFO [                  work.py     create_startBox   118] 0
+2019-09-18 15:29:49,016     INFO [                  work.py     create_startBox   118] 500
+2019-09-18 15:29:49,016     INFO [                  work.py     create_startBox   118] 240
+2019-09-18 15:29:49,016     INFO [                  work.py     create_startBox   118] [{'ip': '192.168.3.79', 'instance': 1, 'port': 4290, 'delay': 0, 'concurrency': 5, 'startid': 1, 'endid': 1000}]
+2019-09-18 15:31:02,989     INFO [                  work.py     create_startBox   118] 500
+2019-09-18 15:31:02,989     INFO [                  work.py     create_startBox   118] 240
+2019-09-18 15:31:02,990     INFO [                  work.py     create_startBox   118] [{'delay': 0, 'port': 4290, 'endid': 1000, 'instance': 1, 'ip': '192.168.3.79', 'concurrency': 5, 'startid': 1}]
+2019-09-18 15:31:02,990     INFO [                  work.py     create_startBox   118] 1000
+2019-09-18 15:31:02,990     INFO [                  work.py     create_startBox   118] 0
+2019-09-18 15:31:02,990     INFO [                  work.py     create_startBox   118] {'username': 'root', 'password': '123456', 'dbtype': 'mysql', 'port': 3307, 'dbname': 'mysql', 'ip': '192.168.3.79'}
+2019-09-18 15:31:02,991     INFO [                  work.py     create_startBox   118] 60
+2019-09-18 15:31:14,556     INFO [                  work.py     create_startBox   118] 1000
+2019-09-18 15:31:14,557     INFO [                  work.py     create_startBox   118] 0
+2019-09-18 15:31:14,557     INFO [                  work.py     create_startBox   118] {'dbname': 'mysql', 'password': '123456', 'ip': '192.168.3.79', 'dbtype': 'mysql', 'port': 3307, 'username': 'root'}
+2019-09-18 15:31:14,557     INFO [                  work.py     create_startBox   118] 60
+2019-09-18 15:31:14,557     INFO [                  work.py     create_startBox   118] 500
+2019-09-18 15:31:14,557     INFO [                  work.py     create_startBox   118] [{'startid': 1, 'delay': 0, 'instance': 1, 'endid': 1000, 'ip': '192.168.3.79', 'concurrency': 5, 'port': 4290}]
+2019-09-18 15:31:14,558     INFO [                  work.py     create_startBox   118] 240
+2019-09-18 15:31:19,654     INFO [                  work.py     create_startBox   118] 1000
+2019-09-18 15:31:19,655     INFO [                  work.py     create_startBox   118] 60
+2019-09-18 15:31:19,655     INFO [                  work.py     create_startBox   118] 240
+2019-09-18 15:31:19,655     INFO [                  work.py     create_startBox   118] {'dbname': 'mysql', 'port': 3307, 'password': '123456', 'username': 'root', 'dbtype': 'mysql', 'ip': '192.168.3.79'}
+2019-09-18 15:31:19,655     INFO [                  work.py     create_startBox   118] [{'port': 4290, 'delay': 0, 'startid': 1, 'instance': 1, 'concurrency': 5, 'endid': 1000, 'ip': '192.168.3.79'}]
+2019-09-18 15:31:19,656     INFO [                  work.py     create_startBox   118] 500
+2019-09-18 15:31:19,656     INFO [                  work.py     create_startBox   118] 0
+2019-09-18 15:31:24,006     INFO [                  work.py     create_startBox   118] {'ip': '192.168.3.79', 'port': 3307, 'username': 'root', 'dbtype': 'mysql', 'password': '123456', 'dbname': 'mysql'}
+2019-09-18 15:31:24,007     INFO [                  work.py     create_startBox   118] 0
+2019-09-18 15:31:24,007     INFO [                  work.py     create_startBox   118] 500
+2019-09-18 15:31:24,007     INFO [                  work.py     create_startBox   118] [{'ip': '192.168.3.79', 'port': 4290, 'delay': 0, 'endid': 1000, 'concurrency': 5, 'startid': 1, 'instance': 1}]
+2019-09-18 15:31:24,008     INFO [                  work.py     create_startBox   118] 240
+2019-09-18 15:31:24,008     INFO [                  work.py     create_startBox   118] 1000
+2019-09-18 15:31:24,008     INFO [                  work.py     create_startBox   118] 60
+2019-09-18 15:31:28,426     INFO [                  work.py     create_startBox   118] 1000
+2019-09-18 15:31:28,427     INFO [                  work.py     create_startBox   118] 0
+2019-09-18 15:31:28,427     INFO [                  work.py     create_startBox   118] [{'concurrency': 5, 'startid': 1, 'delay': 0, 'instance': 1, 'endid': 1000, 'port': 4290, 'ip': '192.168.3.79'}]
+2019-09-18 15:31:28,428     INFO [                  work.py     create_startBox   118] {'password': '123456', 'username': 'root', 'dbtype': 'mysql', 'dbname': 'mysql', 'port': 3307, 'ip': '192.168.3.79'}
+2019-09-18 15:31:28,428     INFO [                  work.py     create_startBox   118] 60
+2019-09-18 15:31:28,428     INFO [                  work.py     create_startBox   118] 500
+2019-09-18 15:31:28,428     INFO [                  work.py     create_startBox   118] 240
+2019-09-18 15:31:30,768     INFO [                  work.py     create_startBox   118] {'dbtype': 'mysql', 'password': '123456', 'dbname': 'mysql', 'username': 'root', 'ip': '192.168.3.79', 'port': 3307}
+2019-09-18 15:31:30,769     INFO [                  work.py     create_startBox   118] 240
+2019-09-18 15:31:30,769     INFO [                  work.py     create_startBox   118] 0
+2019-09-18 15:31:30,769     INFO [                  work.py     create_startBox   118] 1000
+2019-09-18 15:31:30,769     INFO [                  work.py     create_startBox   118] 60
+2019-09-18 15:31:30,770     INFO [                  work.py     create_startBox   118] 500
+2019-09-18 15:31:30,770     INFO [                  work.py     create_startBox   118] [{'concurrency': 5, 'port': 4290, 'startid': 1, 'ip': '192.168.3.79', 'instance': 1, 'endid': 1000, 'delay': 0}]
+2019-09-18 15:31:46,010     INFO [                  work.py     create_startBox   118] [{'concurrency': 5, 'endid': 1000, 'instance': 1, 'port': 4290, 'delay': 0, 'ip': '192.168.3.79', 'startid': 1}]
+2019-09-18 15:31:46,011     INFO [                  work.py     create_startBox   118] 60
+2019-09-18 15:31:46,011     INFO [                  work.py     create_startBox   118] 0
+2019-09-18 15:31:46,011     INFO [                  work.py     create_startBox   118] 500
+2019-09-18 15:31:46,011     INFO [                  work.py     create_startBox   118] {'dbname': 'mysql', 'port': 3307, 'dbtype': 'mysql', 'username': 'root', 'ip': '192.168.3.79', 'password': '123456'}
+2019-09-18 15:31:46,012     INFO [                  work.py     create_startBox   118] 1000
+2019-09-18 15:31:46,012     INFO [                  work.py     create_startBox   118] 240
+2019-09-18 15:31:56,848     INFO [                  work.py     create_startBox   118] 1000
+2019-09-18 15:31:56,849     INFO [                  work.py     create_startBox   118] 500
+2019-09-18 15:31:56,849     INFO [                  work.py     create_startBox   118] {'ip': '192.168.3.79', 'dbname': 'mysql', 'password': '123456', 'username': 'root', 'port': 3307, 'dbtype': 'mysql'}
+2019-09-18 15:31:56,849     INFO [                  work.py     create_startBox   118] [{'ip': '192.168.3.79', 'delay': 0, 'concurrency': 5, 'port': 4290, 'instance': 1, 'startid': 1, 'endid': 1000}]
+2019-09-18 15:31:56,850     INFO [                  work.py     create_startBox   118] 240
+2019-09-18 15:31:56,850     INFO [                  work.py     create_startBox   118] 0
+2019-09-18 15:31:56,850     INFO [                  work.py     create_startBox   118] 60
+2019-09-18 15:32:02,523     INFO [                  work.py     create_startBox   118] {'ip': '192.168.3.79', 'password': '123456', 'dbtype': 'mysql', 'port': 3307, 'dbname': 'mysql', 'username': 'root'}
+2019-09-18 15:32:02,524     INFO [                  work.py     create_startBox   118] 0
+2019-09-18 15:32:02,524     INFO [                  work.py     create_startBox   118] 60
+2019-09-18 15:32:02,524     INFO [                  work.py     create_startBox   118] 1000
+2019-09-18 15:32:02,524     INFO [                  work.py     create_startBox   118] 240
+2019-09-18 15:32:02,524     INFO [                  work.py     create_startBox   118] 500
+2019-09-18 15:32:02,525     INFO [                  work.py     create_startBox   118] [{'ip': '192.168.3.79', 'concurrency': 5, 'delay': 0, 'instance': 1, 'endid': 1000, 'port': 4290, 'startid': 1}]
+2019-09-18 15:32:12,431     INFO [                  work.py     create_startBox   118] 240
+2019-09-18 15:32:12,431     INFO [                  work.py     create_startBox   118] [{'instance': 1, 'endid': 1000, 'startid': 1, 'ip': '192.168.3.79', 'port': 4290, 'delay': 0, 'concurrency': 5}]
+2019-09-18 15:32:12,432     INFO [                  work.py     create_startBox   118] 60
+2019-09-18 15:32:12,432     INFO [                  work.py     create_startBox   118] 0
+2019-09-18 15:32:12,432     INFO [                  work.py     create_startBox   118] 1000
+2019-09-18 15:32:12,432     INFO [                  work.py     create_startBox   118] {'dbtype': 'mysql', 'dbname': 'mysql', 'password': '123456', 'ip': '192.168.3.79', 'port': 3307, 'username': 'root'}
+2019-09-18 15:32:12,433     INFO [                  work.py     create_startBox   118] 500
+2019-09-18 15:32:17,160     INFO [                  work.py     create_startBox   118] 0
+2019-09-18 15:32:17,161     INFO [                  work.py     create_startBox   118] 1000
+2019-09-18 15:32:17,161     INFO [                  work.py     create_startBox   118] 240
+2019-09-18 15:32:17,161     INFO [                  work.py     create_startBox   118] [{'endid': 1000, 'concurrency': 5, 'startid': 1, 'port': 4290, 'instance': 1, 'delay': 0, 'ip': '192.168.3.79'}]
+2019-09-18 15:32:17,162     INFO [                  work.py     create_startBox   118] 500
+2019-09-18 15:32:17,162     INFO [                  work.py     create_startBox   118] {'password': '123456', 'dbtype': 'mysql', 'dbname': 'mysql', 'port': 3307, 'ip': '192.168.3.79', 'username': 'root'}
+2019-09-18 15:32:17,162     INFO [                  work.py     create_startBox   118] 60
+2019-09-18 15:32:21,728     INFO [                  work.py     create_startBox   118] 60
+2019-09-18 15:32:21,729     INFO [                  work.py     create_startBox   118] 500
+2019-09-18 15:32:21,729     INFO [                  work.py     create_startBox   118] 0
+2019-09-18 15:32:21,730     INFO [                  work.py     create_startBox   118] 240
+2019-09-18 15:32:21,730     INFO [                  work.py     create_startBox   118] 1000
+2019-09-18 15:32:21,730     INFO [                  work.py     create_startBox   118] {'dbtype': 'mysql', 'port': 3307, 'ip': '192.168.3.79', 'password': '123456', 'dbname': 'mysql', 'username': 'root'}
+2019-09-18 15:32:21,730     INFO [                  work.py     create_startBox   118] [{'port': 4290, 'startid': 1, 'ip': '192.168.3.79', 'instance': 1, 'endid': 1000, 'concurrency': 5, 'delay': 0}]
+2019-09-18 15:32:43,608     INFO [                  work.py     create_startBox   118] 1000
+2019-09-18 15:32:43,608     INFO [                  work.py     create_startBox   118] 500
+2019-09-18 15:32:43,609     INFO [                  work.py     create_startBox   118] 240
+2019-09-18 15:32:43,609     INFO [                  work.py     create_startBox   118] [{'port': 4290, 'concurrency': 5, 'delay': 0, 'instance': 1, 'startid': 1, 'ip': '192.168.3.79', 'endid': 1000}]
+2019-09-18 15:32:43,609     INFO [                  work.py     create_startBox   118] 60
+2019-09-18 15:32:43,609     INFO [                  work.py     create_startBox   118] {'port': 3307, 'dbname': 'mysql', 'dbtype': 'mysql', 'username': 'root', 'ip': '192.168.3.79', 'password': '123456'}
+2019-09-18 15:32:43,609     INFO [                  work.py     create_startBox   118] 0
+2019-09-18 15:32:48,046     INFO [                  work.py     create_startBox   118] 60
+2019-09-18 15:32:48,047     INFO [                  work.py     create_startBox   118] [{'port': 4290, 'delay': 0, 'ip': '192.168.3.79', 'concurrency': 5, 'startid': 1, 'endid': 1000, 'instance': 1}]
+2019-09-18 15:32:48,047     INFO [                  work.py     create_startBox   118] 240
+2019-09-18 15:32:48,047     INFO [                  work.py     create_startBox   118] 1000
+2019-09-18 15:32:48,047     INFO [                  work.py     create_startBox   118] {'username': 'root', 'port': 3307, 'dbname': 'mysql', 'ip': '192.168.3.79', 'password': '123456', 'dbtype': 'mysql'}
+2019-09-18 15:32:48,048     INFO [                  work.py     create_startBox   118] 0
+2019-09-18 15:32:48,048     INFO [                  work.py     create_startBox   118] 500
+2019-09-18 15:33:35,956     INFO [                  work.py     create_startBox   118] 500
+2019-09-18 15:33:35,957     INFO [                  work.py     create_startBox   118] 0
+2019-09-18 15:33:35,958     INFO [                  work.py     create_startBox   118] 60
+2019-09-18 15:33:35,958     INFO [                  work.py     create_startBox   118] 1000
+2019-09-18 15:33:35,958     INFO [                  work.py     create_startBox   118] 240
+2019-09-18 15:33:35,959     INFO [                  work.py     create_startBox   118] {'port': 3307, 'dbname': 'mysql', 'password': '123456', 'username': 'root', 'ip': '192.168.3.79', 'dbtype': 'mysql'}
+2019-09-18 15:33:35,960     INFO [                  work.py     create_startBox   118] [{'instance': 1, 'port': 4290, 'delay': 0, 'endid': 1000, 'startid': 1, 'ip': '192.168.3.79', 'concurrency': 5}]
+2019-09-18 15:33:51,043     INFO [                  work.py     create_startBox   118] 0
+2019-09-18 15:33:51,044     INFO [                  work.py     create_startBox   118] 500
+2019-09-18 15:33:51,044     INFO [                  work.py     create_startBox   118] 1000
+2019-09-18 15:33:51,044     INFO [                  work.py     create_startBox   118] 60
+2019-09-18 15:33:51,045     INFO [                  work.py     create_startBox   118] [{'startid': 1, 'concurrency': 5, 'instance': 1, 'ip': '192.168.3.79', 'port': 4290, 'delay': 0, 'endid': 1000}]
+2019-09-18 15:33:51,045     INFO [                  work.py     create_startBox   118] {'dbname': 'mysql', 'username': 'root', 'dbtype': 'mysql', 'ip': '192.168.3.79', 'port': 3307, 'password': '123456'}
+2019-09-18 15:33:51,045     INFO [                  work.py     create_startBox   118] 240
+2019-09-18 15:34:08,803     INFO [                  work.py     create_startBox   118] testtime
+2019-09-18 15:34:08,804     INFO [                  work.py     create_startBox   118] scalefactor
+2019-09-18 15:34:08,804     INFO [                  work.py     create_startBox   118] uptime
+2019-09-18 15:34:08,804     INFO [                  work.py     create_startBox   118] dbconfig
+2019-09-18 15:34:08,805     INFO [                  work.py     create_startBox   118] customer
+2019-09-18 15:34:08,805     INFO [                  work.py     create_startBox   118] initialdays
+2019-09-18 15:34:08,805     INFO [                  work.py     create_startBox   118] agents
+2019-09-18 15:35:25,419     INFO [                  work.py     create_startBox   118] dbconfig
+2019-09-18 15:35:25,420     INFO [                  work.py     create_startBox   118] customer
+2019-09-18 15:35:25,420     INFO [                  work.py     create_startBox   118] uptime
+2019-09-18 15:35:25,420     INFO [                  work.py     create_startBox   118] scalefactor
+2019-09-18 15:35:25,421     INFO [                  work.py     create_startBox   118] agents
+2019-09-18 15:35:25,421     INFO [                  work.py     create_startBox   118] testtime
+2019-09-18 15:35:25,421     INFO [                  work.py     create_startBox   118] initialdays
+2019-09-24 13:18:39,094     INFO [                  work.py     create_startBox   118] testtime
+2019-09-24 13:18:39,103     INFO [                  work.py     create_startBox   118] uptime
+2019-09-24 13:18:39,103     INFO [                  work.py     create_startBox   118] dbconfig
+2019-09-24 13:18:39,105     INFO [                  work.py     create_startBox   118] initialdays
+2019-09-24 13:18:39,105     INFO [                  work.py     create_startBox   118] customer
+2019-09-24 13:18:39,106     INFO [                  work.py     create_startBox   118] scalefactor
+2019-09-24 13:18:39,106     INFO [                  work.py     create_startBox   118] agents
+2019-09-25 08:34:07,562     INFO [                  work.py            on_click   165] 
+2019-09-25 08:34:07,565     INFO [                  work.py            on_click   165] 
+2019-09-25 08:34:07,566     INFO [                  work.py            on_click   165] 
+2019-09-25 08:34:07,566     INFO [                  work.py            on_click   165] 
+2019-09-25 08:34:07,566     INFO [                  work.py            on_click   165] 
+2019-09-25 08:34:07,566     INFO [                  work.py            on_click   165] 
+2019-09-25 08:34:07,566     INFO [                  work.py            on_click   165] 
+2019-09-25 08:34:07,567     INFO [                  work.py            on_click   165] 
+2019-09-25 08:34:07,567     INFO [                  work.py            on_click   165] 
+2019-09-25 08:34:07,567     INFO [                  work.py            on_click   165] 
+2019-09-25 08:34:07,567     INFO [                  work.py            on_click   165] 
+2019-09-25 08:34:07,567     INFO [                  work.py            on_click   165] 
+2019-09-25 08:34:07,567     INFO [                  work.py            on_click   165] 
+2019-09-25 08:34:07,567     INFO [                  work.py            on_click   165] 
+2019-09-25 08:34:07,568     INFO [                  work.py            on_click   165] 
+2019-09-25 08:34:07,568     INFO [                  work.py            on_click   165] 
+2019-09-25 08:34:07,568     INFO [                  work.py            on_click   165] 
+2019-09-25 08:34:07,568     INFO [                  work.py            on_click   165] 
+2019-09-25 08:34:07,569     INFO [                  work.py            on_click   167] 
+2019-09-25 08:34:07,569     INFO [                  work.py            on_click   167] 
+2019-09-25 08:34:07,569     INFO [                  work.py            on_click   167] 
+2019-09-25 08:34:07,569     INFO [                  work.py            on_click   167] 
+2019-09-25 08:34:07,569     INFO [                  work.py            on_click   167] 
+2019-09-25 08:34:07,570     INFO [                  work.py            on_click   167] 
+2019-09-25 08:34:07,570     INFO [                  work.py            on_click   167] 
+2019-09-25 08:34:07,570     INFO [                  work.py            on_click   167] 
+2019-09-25 14:48:19,713     INFO [                  work.py            on_click   143] 1
+2019-09-25 14:48:19,715     INFO [                  work.py            on_click   143] 1
+2019-09-25 14:48:19,715     INFO [                  work.py            on_click   143] 
+2019-09-25 14:48:19,715     INFO [                  work.py            on_click   143] 
+2019-09-25 14:48:19,715     INFO [                  work.py            on_click   143] 
+2019-09-25 14:48:19,715     INFO [                  work.py            on_click   143] 
+2019-09-25 14:48:19,715     INFO [                  work.py            on_click   143] 
+2019-09-25 14:48:19,716     INFO [                  work.py            on_click   143] 
+2019-09-25 14:48:19,716     INFO [                  work.py            on_click   143] 
+2019-09-25 14:48:19,716     INFO [                  work.py            on_click   143] 
+2019-09-25 14:48:19,716     INFO [                  work.py            on_click   143] 
+2019-09-25 14:48:19,716     INFO [                  work.py            on_click   143] 
+2019-09-25 14:48:19,716     INFO [                  work.py            on_click   143] 
+2019-09-25 14:48:19,716     INFO [                  work.py            on_click   143] 
+2019-09-25 14:48:19,716     INFO [                  work.py            on_click   143] 
+2019-09-25 14:48:19,716     INFO [                  work.py            on_click   143] 
+2019-09-25 14:48:19,716     INFO [                  work.py            on_click   143] 
+2019-09-25 14:48:19,716     INFO [                  work.py            on_click   143] 
+2019-09-25 14:48:19,716     INFO [                  work.py            on_click   145] 
+2019-09-25 14:48:19,717     INFO [                  work.py            on_click   145] 
+2019-09-25 14:48:19,717     INFO [                  work.py            on_click   145] 
+2019-09-25 14:48:19,717     INFO [                  work.py            on_click   145] 
+2019-09-25 14:48:19,717     INFO [                  work.py            on_click   145] 
+2019-09-25 14:48:19,717     INFO [                  work.py            on_click   145] 
+2019-09-25 14:48:19,717     INFO [                  work.py            on_click   145] 
+2019-09-25 14:48:19,717     INFO [                  work.py            on_click   145] 
+2019-09-25 14:48:19,717     INFO [                  work.py            on_click   145] 
+2019-09-25 14:48:56,977     INFO [                  work.py            on_click   143] 1
+2019-09-25 14:48:56,977     INFO [                  work.py            on_click   143] 2
+2019-09-25 14:48:56,977     INFO [                  work.py            on_click   143] 3
+2019-09-25 14:48:56,977     INFO [                  work.py            on_click   143] 4
+2019-09-25 14:48:56,978     INFO [                  work.py            on_click   143] 5
+2019-09-25 14:48:56,978     INFO [                  work.py            on_click   143] 6
+2019-09-25 14:48:56,978     INFO [                  work.py            on_click   143] 7
+2019-09-25 14:48:56,978     INFO [                  work.py            on_click   143] 8
+2019-09-25 14:48:56,978     INFO [                  work.py            on_click   143] 9
+2019-09-25 14:48:56,978     INFO [                  work.py            on_click   143] 10
+2019-09-25 14:48:56,978     INFO [                  work.py            on_click   143] 11
+2019-09-25 14:48:56,979     INFO [                  work.py            on_click   143] 12
+2019-09-25 14:48:56,979     INFO [                  work.py            on_click   143] 13
+2019-09-25 14:48:56,979     INFO [                  work.py            on_click   143] 14
+2019-09-25 14:48:56,979     INFO [                  work.py            on_click   143] 15
+2019-09-25 14:48:56,979     INFO [                  work.py            on_click   143] 16
+2019-09-25 14:48:56,979     INFO [                  work.py            on_click   143] 17
+2019-09-25 14:48:56,981     INFO [                  work.py            on_click   143] 18
+2019-09-25 14:48:56,982     INFO [                  work.py            on_click   145] 
+2019-09-25 14:48:56,982     INFO [                  work.py            on_click   145] 
+2019-09-25 14:48:56,982     INFO [                  work.py            on_click   145] 
+2019-09-25 14:48:56,982     INFO [                  work.py            on_click   145] 
+2019-09-25 14:48:56,982     INFO [                  work.py            on_click   145] 
+2019-09-25 14:48:56,982     INFO [                  work.py            on_click   145] 
+2019-09-25 14:48:56,983     INFO [                  work.py            on_click   145] 
+2019-09-25 14:48:56,983     INFO [                  work.py            on_click   145] 
+2019-09-25 14:48:56,983     INFO [                  work.py            on_click   145] 
+2019-09-25 15:03:25,856     INFO [                  work.py            on_click   143] 123
+2019-09-25 15:03:25,856     INFO [                  work.py            on_click   143] 123123
+2019-09-25 15:03:25,856     INFO [                  work.py            on_click   143] 123
+2019-09-25 15:03:25,856     INFO [                  work.py            on_click   143] 123
+2019-09-25 15:03:25,856     INFO [                  work.py            on_click   143] 123
+2019-09-25 15:03:25,857     INFO [                  work.py            on_click   143] 123
+2019-09-25 15:03:25,857     INFO [                  work.py            on_click   143] 123
+2019-09-25 15:03:25,857     INFO [                  work.py            on_click   143] 123
+2019-09-25 15:03:25,857     INFO [                  work.py            on_click   143] 123
+2019-09-25 15:03:25,857     INFO [                  work.py            on_click   143] 123
+2019-09-25 15:03:25,857     INFO [                  work.py            on_click   143] 123
+2019-09-25 15:03:25,857     INFO [                  work.py            on_click   143] 123
+2019-09-25 15:03:25,857     INFO [                  work.py            on_click   143] 123
+2019-09-25 15:03:25,857     INFO [                  work.py            on_click   143] 123
+2019-09-25 15:03:25,857     INFO [                  work.py            on_click   143] 123
+2019-09-25 15:03:25,857     INFO [                  work.py            on_click   143] 123
+2019-09-25 15:03:25,858     INFO [                  work.py            on_click   143] 123
+2019-09-25 15:03:25,858     INFO [                  work.py            on_click   143] 123
+2019-09-25 15:03:25,858     INFO [                  work.py            on_click   145] 
+2019-09-25 15:03:25,858     INFO [                  work.py            on_click   145] 
+2019-09-25 15:03:25,858     INFO [                  work.py            on_click   145] 
+2019-09-25 15:03:25,858     INFO [                  work.py            on_click   145] 
+2019-09-25 15:03:25,858     INFO [                  work.py            on_click   145] 
+2019-09-25 15:03:25,858     INFO [                  work.py            on_click   145] 
+2019-09-25 15:03:25,858     INFO [                  work.py            on_click   145] 
+2019-09-25 15:03:25,858     INFO [                  work.py            on_click   145] 
+2019-09-25 15:03:25,858     INFO [                  work.py            on_click   145] 
+2019-09-25 15:04:06,302     INFO [                  work.py            on_click   143] 123
+2019-09-25 15:04:06,303     INFO [                  work.py            on_click   143] 123
+2019-09-25 15:04:06,303     INFO [                  work.py            on_click   143] 
+2019-09-25 15:04:06,303     INFO [                  work.py            on_click   143] 
+2019-09-25 15:04:06,303     INFO [                  work.py            on_click   143] 
+2019-09-25 15:04:06,304     INFO [                  work.py            on_click   143] 
+2019-09-25 15:04:06,304     INFO [                  work.py            on_click   143] 
+2019-09-25 15:04:06,304     INFO [                  work.py            on_click   143] 
+2019-09-25 15:04:06,304     INFO [                  work.py            on_click   143] 
+2019-09-25 15:04:06,304     INFO [                  work.py            on_click   143] 
+2019-09-25 15:04:06,304     INFO [                  work.py            on_click   143] 
+2019-09-25 15:04:06,304     INFO [                  work.py            on_click   143] 
+2019-09-25 15:04:06,305     INFO [                  work.py            on_click   143] 
+2019-09-25 15:04:06,305     INFO [                  work.py            on_click   143] 
+2019-09-25 15:04:06,305     INFO [                  work.py            on_click   143] 
+2019-09-25 15:04:06,305     INFO [                  work.py            on_click   143] 
+2019-09-25 15:04:06,305     INFO [                  work.py            on_click   143] 
+2019-09-25 15:04:06,306     INFO [                  work.py            on_click   143] 
+2019-09-25 15:04:06,306     INFO [                  work.py            on_click   145] 
+2019-09-25 15:04:06,306     INFO [                  work.py            on_click   145] 
+2019-09-25 15:04:06,307     INFO [                  work.py            on_click   145] 
+2019-09-25 15:04:06,307     INFO [                  work.py            on_click   145] 
+2019-09-25 15:04:06,307     INFO [                  work.py            on_click   145] 
+2019-09-25 15:04:06,308     INFO [                  work.py            on_click   145] 
+2019-09-25 15:04:06,308     INFO [                  work.py            on_click   145] 
+2019-09-25 15:04:06,308     INFO [                  work.py            on_click   145] 
+2019-09-25 15:04:06,308     INFO [                  work.py            on_click   145] 
+2019-09-25 15:04:49,897     INFO [                  work.py            on_click   143] 
+2019-09-25 15:04:49,898     INFO [                  work.py            on_click   143] 123
+2019-09-25 15:04:49,898     INFO [                  work.py            on_click   143] 
+2019-09-25 15:04:49,898     INFO [                  work.py            on_click   143] 
+2019-09-25 15:04:49,898     INFO [                  work.py            on_click   143] 
+2019-09-25 15:04:49,898     INFO [                  work.py            on_click   143] 
+2019-09-25 15:04:49,898     INFO [                  work.py            on_click   143] 
+2019-09-25 15:04:49,898     INFO [                  work.py            on_click   143] 
+2019-09-25 15:04:49,899     INFO [                  work.py            on_click   143] 
+2019-09-25 15:04:49,899     INFO [                  work.py            on_click   143] 
+2019-09-25 15:04:49,899     INFO [                  work.py            on_click   143] 
+2019-09-25 15:04:49,899     INFO [                  work.py            on_click   143] 
+2019-09-25 15:04:49,899     INFO [                  work.py            on_click   143] 
+2019-09-25 15:04:49,899     INFO [                  work.py            on_click   143] 
+2019-09-25 15:04:49,899     INFO [                  work.py            on_click   143] 
+2019-09-25 15:04:49,900     INFO [                  work.py            on_click   143] 
+2019-09-25 15:04:49,900     INFO [                  work.py            on_click   143] 
+2019-09-25 15:04:49,900     INFO [                  work.py            on_click   143] 
+2019-09-25 15:04:49,900     INFO [                  work.py            on_click   145] 
+2019-09-25 15:04:49,900     INFO [                  work.py            on_click   145] 
+2019-09-25 15:04:49,900     INFO [                  work.py            on_click   145] 
+2019-09-25 15:04:49,900     INFO [                  work.py            on_click   145] 
+2019-09-25 15:04:49,900     INFO [                  work.py            on_click   145] 
+2019-09-25 15:04:49,900     INFO [                  work.py            on_click   145] 
+2019-09-25 15:04:49,901     INFO [                  work.py            on_click   145] 
+2019-09-25 15:04:49,901     INFO [                  work.py            on_click   145] 
+2019-09-25 15:04:49,901     INFO [                  work.py            on_click   145] 
+2019-09-25 15:39:27,386     INFO [                  work.py            on_click   188] 
+2019-09-25 15:39:27,389     INFO [                  work.py            on_click   188] 
+2019-09-25 15:39:27,389     INFO [                  work.py            on_click   188] 
+2019-09-25 15:39:27,389     INFO [                  work.py            on_click   188] 
+2019-09-25 15:39:27,389     INFO [                  work.py            on_click   188] 
+2019-09-25 15:39:27,390     INFO [                  work.py            on_click   188] 
+2019-09-25 15:39:27,390     INFO [                  work.py            on_click   188] 
+2019-09-25 15:39:27,390     INFO [                  work.py            on_click   188] 
+2019-09-25 15:39:27,390     INFO [                  work.py            on_click   188] 
+2019-09-25 15:39:27,390     INFO [                  work.py            on_click   188] 
+2019-09-25 15:39:27,390     INFO [                  work.py            on_click   188] 
+2019-09-25 15:39:27,390     INFO [                  work.py            on_click   188] 
+2019-09-25 15:39:27,390     INFO [                  work.py            on_click   188] 
+2019-09-25 15:39:27,391     INFO [                  work.py            on_click   188] 
+2019-09-25 15:39:27,391     INFO [                  work.py            on_click   188] 
+2019-09-25 15:39:27,391     INFO [                  work.py            on_click   188] 
+2019-09-25 15:39:27,391     INFO [                  work.py            on_click   188] 
+2019-09-25 15:39:27,391     INFO [                  work.py            on_click   188] 
+2019-09-25 15:39:27,393     INFO [                  work.py            on_click   190] 192.168.3.79
+2019-09-25 15:39:27,393     INFO [                  work.py            on_click   190] 8642
+2019-09-25 15:39:27,393     INFO [                  work.py            on_click   190] http://39.97.226.213:18800/upload
+2019-09-25 15:39:27,393     INFO [                  work.py            on_click   190] https://oapi.dingtalk.com/robot/send?access_token=99c37364ccd38d5bbec915e20d335bc5aa6b8ef0acb753cf246dd629f75892e1
+2019-09-25 15:39:27,393     INFO [                  work.py            on_click   190] 
+2019-09-25 15:39:27,394     INFO [                  work.py            on_click   190] 60
+2019-09-25 15:39:27,394     INFO [                  work.py            on_click   190] 10
+2019-09-25 15:39:27,394     INFO [                  work.py            on_click   190] 600
+2019-09-25 15:39:27,394     INFO [                  work.py            on_click   190] EN
+2019-09-25 17:36:35,584     INFO [                   001.py            on_click   179] 
+2019-09-25 17:36:35,587     INFO [                   001.py            on_click   179] 
+2019-09-25 17:36:35,587     INFO [                   001.py            on_click   179] 
+2019-09-25 17:36:35,587     INFO [                   001.py            on_click   179] 
+2019-09-25 17:36:35,587     INFO [                   001.py            on_click   179] 
+2019-09-25 17:36:35,588     INFO [                   001.py            on_click   179] 
+2019-09-25 17:36:35,588     INFO [                   001.py            on_click   179] 
+2019-09-25 17:36:35,588     INFO [                   001.py            on_click   179] 
+2019-09-25 17:36:35,588     INFO [                   001.py            on_click   179] 
+2019-09-25 17:36:35,588     INFO [                   001.py            on_click   179] 
+2019-09-25 17:36:35,588     INFO [                   001.py            on_click   179] 
+2019-09-25 17:36:35,588     INFO [                   001.py            on_click   179] 
+2019-09-25 17:36:35,589     INFO [                   001.py            on_click   179] 
+2019-09-25 17:36:35,589     INFO [                   001.py            on_click   179] 
+2019-09-25 17:36:35,589     INFO [                   001.py            on_click   179] 
+2019-09-25 17:36:35,589     INFO [                   001.py            on_click   179] 
+2019-09-25 17:36:35,589     INFO [                   001.py            on_click   179] 
+2019-09-25 17:36:35,589     INFO [                   001.py            on_click   179] 
+2019-09-25 17:36:35,589     INFO [                   001.py            on_click   181] 192.168.3.79
+2019-09-25 17:36:35,589     INFO [                   001.py            on_click   181] 8642
+2019-09-25 17:36:35,590     INFO [                   001.py            on_click   181] http://39.97.226.213:18800/upload
+2019-09-25 17:36:35,590     INFO [                   001.py            on_click   181] https://oapi.dingtalk.com/robot/send?access_token=99c37364ccd38d5bbec915e20d335bc5aa6b8ef0acb753cf246dd629f75892e1
+2019-09-25 17:36:35,590     INFO [                   001.py            on_click   181] 
+2019-09-25 17:36:35,590     INFO [                   001.py            on_click   181] 60
+2019-09-25 17:36:35,590     INFO [                   001.py            on_click   181] 10
+2019-09-25 17:36:35,590     INFO [                   001.py            on_click   181] 600
+2019-09-25 17:36:35,590     INFO [                   001.py            on_click   181] EN
+2019-09-25 17:36:37,767     INFO [                   001.py            on_click   179] 
+2019-09-25 17:36:37,767     INFO [                   001.py            on_click   179] 
+2019-09-25 17:36:37,768     INFO [                   001.py            on_click   179] 
+2019-09-25 17:36:37,768     INFO [                   001.py            on_click   179] 
+2019-09-25 17:36:37,768     INFO [                   001.py            on_click   179] 
+2019-09-25 17:36:37,768     INFO [                   001.py            on_click   179] 
+2019-09-25 17:36:37,768     INFO [                   001.py            on_click   179] 
+2019-09-25 17:36:37,768     INFO [                   001.py            on_click   179] 
+2019-09-25 17:36:37,768     INFO [                   001.py            on_click   179] 
+2019-09-25 17:36:37,768     INFO [                   001.py            on_click   179] 
+2019-09-25 17:36:37,768     INFO [                   001.py            on_click   179] 
+2019-09-25 17:36:37,768     INFO [                   001.py            on_click   179] 
+2019-09-25 17:36:37,768     INFO [                   001.py            on_click   179] 
+2019-09-25 17:36:37,769     INFO [                   001.py            on_click   179] 
+2019-09-25 17:36:37,769     INFO [                   001.py            on_click   179] 
+2019-09-25 17:36:37,769     INFO [                   001.py            on_click   179] 
+2019-09-25 17:36:37,769     INFO [                   001.py            on_click   179] 
+2019-09-25 17:36:37,769     INFO [                   001.py            on_click   179] 
+2019-09-25 17:36:37,769     INFO [                   001.py            on_click   181] 192.168.3.79
+2019-09-25 17:36:37,769     INFO [                   001.py            on_click   181] 8642
+2019-09-25 17:36:37,769     INFO [                   001.py            on_click   181] http://39.97.226.213:18800/upload
+2019-09-25 17:36:37,769     INFO [                   001.py            on_click   181] https://oapi.dingtalk.com/robot/send?access_token=99c37364ccd38d5bbec915e20d335bc5aa6b8ef0acb753cf246dd629f75892e1
+2019-09-25 17:36:37,769     INFO [                   001.py            on_click   181] 
+2019-09-25 17:36:37,769     INFO [                   001.py            on_click   181] 60
+2019-09-25 17:36:37,770     INFO [                   001.py            on_click   181] 10
+2019-09-25 17:36:37,770     INFO [                   001.py            on_click   181] 600
+2019-09-25 17:36:37,770     INFO [                   001.py            on_click   181] EN
+2019-09-25 20:15:26,776     INFO [                  work.py            on_click   187] 
+2019-09-25 20:15:26,781     INFO [                  work.py            on_click   187] 
+2019-09-25 20:15:26,781     INFO [                  work.py            on_click   187] 
+2019-09-25 20:15:26,781     INFO [                  work.py            on_click   187] 
+2019-09-25 20:15:26,782     INFO [                  work.py            on_click   187] 
+2019-09-25 20:15:26,782     INFO [                  work.py            on_click   187] 
+2019-09-25 20:15:26,782     INFO [                  work.py            on_click   187] 
+2019-09-25 20:15:26,782     INFO [                  work.py            on_click   187] 
+2019-09-25 20:15:26,782     INFO [                  work.py            on_click   187] 
+2019-09-25 20:15:26,782     INFO [                  work.py            on_click   187] 
+2019-09-25 20:15:26,783     INFO [                  work.py            on_click   187] 
+2019-09-25 20:15:26,783     INFO [                  work.py            on_click   187] 
+2019-09-25 20:15:26,783     INFO [                  work.py            on_click   187] 
+2019-09-25 20:15:26,783     INFO [                  work.py            on_click   187] 
+2019-09-25 20:15:26,783     INFO [                  work.py            on_click   187] 
+2019-09-25 20:15:26,783     INFO [                  work.py            on_click   187] 
+2019-09-25 20:15:26,783     INFO [                  work.py            on_click   187] 
+2019-09-25 20:15:26,783     INFO [                  work.py            on_click   187] 
+2019-09-25 20:15:26,783     INFO [                  work.py            on_click   189] 192.168.3.79
+2019-09-25 20:15:26,784     INFO [                  work.py            on_click   189] 8642
+2019-09-25 20:15:26,784     INFO [                  work.py            on_click   189] http://39.97.226.213:18800/upload
+2019-09-25 20:15:26,784     INFO [                  work.py            on_click   189] https://oapi.dingtalk.com/robot/send?access_token=99c37364ccd38d5bbec915e20d335bc5aa6b8ef0acb753cf246dd629f75892e1
+2019-09-25 20:15:26,784     INFO [                  work.py            on_click   189] 
+2019-09-25 20:15:26,784     INFO [                  work.py            on_click   189] 60
+2019-09-25 20:15:26,784     INFO [                  work.py            on_click   189] 10
+2019-09-25 20:15:26,784     INFO [                  work.py            on_click   189] 600
+2019-09-25 20:15:26,784     INFO [                  work.py            on_click   189] EN
+2019-09-25 20:15:26,927     INFO [                  work.py            on_click   187] 
+2019-09-25 20:15:26,928     INFO [                  work.py            on_click   187] 
+2019-09-25 20:15:26,928     INFO [                  work.py            on_click   187] 
+2019-09-25 20:15:26,928     INFO [                  work.py            on_click   187] 
+2019-09-25 20:15:26,928     INFO [                  work.py            on_click   187] 
+2019-09-25 20:15:26,928     INFO [                  work.py            on_click   187] 
+2019-09-25 20:15:26,928     INFO [                  work.py            on_click   187] 
+2019-09-25 20:15:26,928     INFO [                  work.py            on_click   187] 
+2019-09-25 20:15:26,928     INFO [                  work.py            on_click   187] 
+2019-09-25 20:15:26,929     INFO [                  work.py            on_click   187] 
+2019-09-25 20:15:26,929     INFO [                  work.py            on_click   187] 
+2019-09-25 20:15:26,929     INFO [                  work.py            on_click   187] 
+2019-09-25 20:15:26,929     INFO [                  work.py            on_click   187] 
+2019-09-25 20:15:26,929     INFO [                  work.py            on_click   187] 
+2019-09-25 20:15:26,929     INFO [                  work.py            on_click   187] 
+2019-09-25 20:15:26,929     INFO [                  work.py            on_click   187] 
+2019-09-25 20:15:26,929     INFO [                  work.py            on_click   187] 
+2019-09-25 20:15:26,930     INFO [                  work.py            on_click   187] 
+2019-09-25 20:15:26,930     INFO [                  work.py            on_click   189] 192.168.3.79
+2019-09-25 20:15:26,930     INFO [                  work.py            on_click   189] 8642
+2019-09-25 20:15:26,930     INFO [                  work.py            on_click   189] http://39.97.226.213:18800/upload
+2019-09-25 20:15:26,930     INFO [                  work.py            on_click   189] https://oapi.dingtalk.com/robot/send?access_token=99c37364ccd38d5bbec915e20d335bc5aa6b8ef0acb753cf246dd629f75892e1
+2019-09-25 20:15:26,930     INFO [                  work.py            on_click   189] 
+2019-09-25 20:15:26,930     INFO [                  work.py            on_click   189] 60
+2019-09-25 20:15:26,930     INFO [                  work.py            on_click   189] 10
+2019-09-25 20:15:26,931     INFO [                  work.py            on_click   189] 600
+2019-09-25 20:15:26,931     INFO [                  work.py            on_click   189] EN
