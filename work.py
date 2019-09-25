@@ -6,7 +6,10 @@ import json
 from PyQt5.QtWidgets import (QApplication, QComboBox, QDialog,
         QDialogButtonBox, QFormLayout, QGridLayout, QGroupBox, QHBoxLayout,
         QLabel, QLineEdit, QMenu, QMenuBar, QPushButton, QSpinBox, QTextEdit,
-        QVBoxLayout, QStackedWidget, QListWidget, QWidget, QMainWindow)
+        QVBoxLayout, QStackedWidget, QListWidget, QWidget, QMainWindow, 
+        QListWidgetItem)
+from PyQt5.QtGui import QIcon
+import PyQt5.QtGui as QtGui
 from log import logger
 
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
@@ -16,41 +19,32 @@ class TPCEAutoRunnerUI(QDialog):
 
     def __init__(self):
         super(TPCEAutoRunnerUI, self).__init__()
-
-        self.setGeometry(300,50,800,800)
-        self.setWindowTitle('TPCEAutoRunnerUI')
-
-        self.leftlist=QListWidget()
-        self.leftlist.insertItem(0,'开始参数配置')
-        self.leftlist.insertItem(1,'基础参数配置')
-        self.leftlist.insertItem(2,'测试图像')
-
         self.start_map = {
-            "customer": 1000,
-            "initialdays": 60,
-            "scalefactor": 500,
-            "uptime": 0,
-            "testtime": 240,
-            "dbconfig": {
+        "customer": 1000,
+        "initialdays": 60,
+        "scalefactor": 500,
+        "uptime": 0,
+        "testtime": 240,
+        "dbconfig": {
+            "ip": "192.168.3.79",
+            "port":3307,
+            "username": "root",
+            "password": "123456",
+            "dbname": "mysql",
+            "dbtype": "mysql"
+        },
+        "agents": [
+            {
                 "ip": "192.168.3.79",
-                "port":3307,
-                "username": "root",
-                "password": "123456",
-                "dbname": "mysql",
-                "dbtype": "mysql"
-            },
-            "agents": [
-                {
-                    "ip": "192.168.3.79",
-                    "port": 4290,
-                    "concurrency": 5,
-                    "instance": 1,
-                    "startid": 1,
-                    "endid": 1000,
-                    "delay": 0
-                }
+                "port": 4290,
+                "concurrency": 5,
+                "instance": 1,
+                "startid": 1,
+                "endid": 1000,
+                "delay": 0
+            }
             ]
-        }
+         }
 
         self.config_map = {
             "ip": "192.168.3.79",
@@ -63,7 +57,26 @@ class TPCEAutoRunnerUI(QDialog):
             "errorTime":600,
             "reportLanguage": "EN"
         }
+        self.setGeometry(200,100,1000,1000)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("1.ico"),QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.setWindowIcon(icon)
+        self.setWindowTitle('TPCEAutoRunnerUI')
+        
 
+        self.leftlist=QListWidget()
+        self.leftlist.insertItem(0,'开始参数配置')
+        self.leftlist.insertItem(1,'基础参数配置')
+        self.leftlist.insertItem(2,'测试图像')
+        item1 = QListWidgetItem()
+        item1.setSizeHint(QSize(200,50))
+        self.leftlist.setItemWidget(item1)
+        self.leftlist.setStyleSheet("QListWidget{color:rgb(173,175,178); background:rgb(25,27,31);border:0px solid gray;}"
+                                  "QListWidget::Item{height:45px;border:0px solid gray;padding-left:15;}"
+                                  "QListWidget::Item:hover{color:rgb(255,255,255);background:transparent;border:0px solid gray;}"
+                                  "QListWidget::Item:selected{border-image:url(images/listwidget_h.png); color:rgb(255,255,255);border:0px solid gray;}"
+                                  "QListWidget::Item:selected:active{background:#00FFFFFF;color:#FFFFFF;border-width:0;}"
+                                  )
 
 
         self.startBox=QGroupBox('开始参数配置')
@@ -83,14 +96,18 @@ class TPCEAutoRunnerUI(QDialog):
         self.stack.addWidget(self.configBox)
         self.stack.addWidget(self.plotBox)
 
-        HBox=QHBoxLayout()
-        HBox.addWidget(self.leftlist)
-        HBox.addWidget(self.stack)
 
-        self.setLayout(HBox)
+        mainLayout = QHBoxLayout()
+        mainLayout.addWidget(self.leftlist)
+        mainLayout.addWidget(self.stack)
+        mainLayout.spacing()
+        mainLayout.addStretch(100)            
+        mainLayout.setSpacing(5)
+
+
+        self.setLayout(mainLayout)
 
         self.leftlist.currentRowChanged.connect(self.display)
-
 
         self.show()    
         
