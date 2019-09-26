@@ -10,89 +10,69 @@ from PyQt5.QtWidgets import (QApplication, QComboBox, QDialog,
         QListWidgetItem)
 from PyQt5.QtGui import QIcon
 import PyQt5.QtGui as QtGui
+
+from PyQt5.QtGui import *
+from PyQt5.QtWidgets import *
+from PyQt5.QtCore import *
 from log import logger
 
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.figure import Figure
 import random
+def load_json(fpath):
+    with open(fpath,'r', encoding='utf-8') as f:
+        dict_data = json.loads(f.read())
+    return dict_data
+
 class TPCEAutoRunnerUI(QDialog):
 
     def __init__(self):
         super(TPCEAutoRunnerUI, self).__init__()
-        self.start_map = {
-        "customer": 1000,
-        "initialdays": 60,
-        "scalefactor": 500,
-        "uptime": 0,
-        "testtime": 240,
-        "dbconfig": {
-            "ip": "192.168.3.79",
-            "port":3307,
-            "username": "root",
-            "password": "123456",
-            "dbname": "mysql",
-            "dbtype": "mysql"
-        },
-        "agents": [
-            {
-                "ip": "192.168.3.79",
-                "port": 4290,
-                "concurrency": 5,
-                "instance": 1,
-                "startid": 1,
-                "endid": 1000,
-                "delay": 0
-            }
-            ]
-         }
+        self.start_map = load_json('start.json')
+        self.config_map = load_json('config.json')
 
-        self.config_map = {
-            "ip": "192.168.3.79",
-            "port": 8642,
-            "mapBedUrl": "http://39.97.226.213:18800/upload",
-            "dingdingUrl": [
-                "https://oapi.dingtalk.com/robot/send?access_token=99c37364ccd38d5bbec915e20d335bc5aa6b8ef0acb753cf246dd629f75892e1"],
-            "dingdingTime": 60,
-            "resultTime": 10,
-            "errorTime":600,
-            "reportLanguage": "EN"
-        }
-        self.setGeometry(200,100,1000,1000)
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("1.ico"),QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.setWindowIcon(icon)
+        self.setGeometry(200,100,1280,780)
         self.setWindowTitle('TPCEAutoRunnerUI')
         
 
-        self.leftlist=QListWidget()
-        self.leftlist.insertItem(0,'开始参数配置')
-        self.leftlist.insertItem(1,'基础参数配置')
-        self.leftlist.insertItem(2,'测试图像')
-        item1 = QListWidgetItem()
-        item1.setSizeHint(QSize(200,50))
-        self.leftlist.setItemWidget(item1)
-        self.leftlist.setStyleSheet("QListWidget{color:rgb(173,175,178); background:rgb(25,27,31);border:0px solid gray;}"
-                                  "QListWidget::Item{height:45px;border:0px solid gray;padding-left:15;}"
-                                  "QListWidget::Item:hover{color:rgb(255,255,255);background:transparent;border:0px solid gray;}"
-                                  "QListWidget::Item:selected{border-image:url(images/listwidget_h.png); color:rgb(255,255,255);border:0px solid gray;}"
-                                  "QListWidget::Item:selected:active{background:#00FFFFFF;color:#FFFFFF;border-width:0;}"
+        self.leftlist = QListWidget()
+
+        #调整初始大小
+        self.leftlist.resize(60, 700)
+        #设置调整宽和高
+        self.leftlist.setFixedSize(60, 700)
+        self.leftlist.insertItem(0,'设置')
+        self.leftlist.insertItem(1,'绘图')
+        self.leftlist.insertItem(2,'报告')
+        self.leftlist.insertItem(3,'启动')
+
+        #单机出发绑定的糟函数
+        self.leftlist.itemClicked.connect(self.start_clicked)
+
+        self.leftlist.setStyleSheet("QListWidget{color:rgb(0,0,0); background:rgb(255,255,255);border:0px solid gray;}"
+                                  "QListWidget::Item{height:50px;border:0px solid gray;padding-left:0;}"
+                                  "QListWidget::Item:hover{color:rgb(0,255,0);border:0px solid gray;}"
+                                  #"QListWidget::Item:{color:rgb(0,0,0);border:0px solid gray;}"
+                                  "QListWidget::Item:selected:active{background:rgb();color:rgb(0,0,0);border-width:0;}"
                                   )
 
 
-        self.startBox=QGroupBox('开始参数配置')
+        self.settingBox=QGroupBox()
+        self.settingBox.resize(1220, 700)
+        #设置调整宽和高
+        self.settingBox.setFixedSize(1220, 700)
         self.configBox=QGroupBox('基础参数配置')
         self.plotBox=QGroupBox('测试图像')
 
-        self.startBox_list = list()
         self.configBox_list = list()
 
-        self.create_startBox()
+        self.create_settingBox()
         self.create_configBox()
         self.create_plotBox()
 
         self.stack=QStackedWidget(self)
 
-        self.stack.addWidget(self.startBox)
+        self.stack.addWidget(self.settingBox)
         self.stack.addWidget(self.configBox)
         self.stack.addWidget(self.plotBox)
 
@@ -109,54 +89,136 @@ class TPCEAutoRunnerUI(QDialog):
 
         self.leftlist.currentRowChanged.connect(self.display)
 
-        self.show()    
+        self.show()
+
+    def start_clicked(self,item):
+        if item.text() == '启动':
+            logger.info('点击了启动item，开始启动 ～～')
+
         
-    def create_startBox(self):
-        layout = QFormLayout()
-        for i in range(18):
-            self.startBox_list.append(QLineEdit())
+    def create_settingBox(self):
 
-        self.startBox_list[0].setText('')
-        self.startBox_list[1].setText('')
-        self.startBox_list[2].setText('')
-        self.startBox_list[3].setText('')
-        self.startBox_list[4].setText('')
-        self.startBox_list[5].setText('')
-        self.startBox_list[6].setText('')
-        self.startBox_list[7].setText('')
-        self.startBox_list[8].setText('')
-        self.startBox_list[9].setText('')
-        self.startBox_list[10].setText('')
-        self.startBox_list[11].setText('')
-        self.startBox_list[12].setText('')
-        self.startBox_list[13].setText('')
-        self.startBox_list[14].setText('')
-        self.startBox_list[15].setText('')
-        self.startBox_list[16].setText('')
-        self.startBox_list[17].setText('')
+        mainLayout = QHBoxLayout()
 
-        layout.addRow(QLabel("customer:"), self.startBox_list[0])
-        layout.addRow(QLabel("initialdays:"), self.startBox_list[1])
-        layout.addRow(QLabel("scalefactor:"), self.startBox_list[2])
-        layout.addRow(QLabel("uptime:"), self.startBox_list[3])
-        layout.addRow(QLabel("testtime:"), self.startBox_list[4])
-        layout.addRow(QLabel("dbconfig:"))
-        layout.addRow(QLabel("ip:"), self.startBox_list[5])
-        layout.addRow(QLabel("port:"), self.startBox_list[6])
-        layout.addRow(QLabel("username:"), self.startBox_list[7])
-        layout.addRow(QLabel("password:"), self.startBox_list[8])
-        layout.addRow(QLabel("dbname:"), self.startBox_list[9])
-        layout.addRow(QLabel("dbtype:"), self.startBox_list[10])
-        layout.addRow(QLabel("agents:"))
-        layout.addRow(QLabel("ip:"), self.startBox_list[11])
-        layout.addRow(QLabel("port:"), self.startBox_list[12])
-        layout.addRow(QLabel("concurrency:"), self.startBox_list[13])
-        layout.addRow(QLabel("instance:"), self.startBox_list[14])
-        layout.addRow(QLabel("startid:"), self.startBox_list[15])
-        layout.addRow(QLabel("endid:"), self.startBox_list[16])
-        layout.addRow(QLabel("delay:"), self.startBox_list[17])
+        mainTab = QTabWidget()
+        startTab = QWidget()
+        configTab = QWidget()
 
-        self.startBox.setLayout(layout)
+
+        #--------------startBox----------------
+        startBox = QHBoxLayout()
+
+        layoutL = QFormLayout()
+
+        customer = QLineEdit()
+        initialdays = QLineEdit()
+        scalefactor = QLineEdit()
+        uptime = QLineEdit()
+        testtime = QLineEdit()
+        dbip = QLineEdit()
+        dbport = QLineEdit()
+        dbusername = QLineEdit()
+        dbpassword = QLineEdit()
+        dbname = QLineEdit()
+        dbtype = QLineEdit()
+
+        customer.setText(str(self.start_map['customer']))
+        initialdays.setText(str(self.start_map['initialdays']))
+        scalefactor.setText(str(self.start_map['scalefactor']))
+        uptime.setText(str(self.start_map['uptime']))
+        testtime.setText(str(self.start_map['testtime']))
+
+        dbip.setText(str(self.start_map['dbconfig']['ip']))
+        dbport.setText(str(self.start_map['dbconfig']['port']))
+        dbusername.setText(str(self.start_map['dbconfig']['username']))
+        dbpassword.setText(str(self.start_map['dbconfig']['password']))
+        dbname.setText(str(self.start_map['dbconfig']['dbname']))
+        dbtype.setText(str(self.start_map['dbconfig']['dbtype']))
+
+        layoutL.addRow(QLabel("用户数量:"), customer)
+        layoutL.addRow(QLabel("初始天数:"), initialdays)
+        layoutL.addRow(QLabel("比例因子:"), scalefactor)
+        layoutL.addRow(QLabel("上升时长:"), uptime)
+        layoutL.addRow(QLabel("测试时长:"), testtime)
+        layoutL.addRow(QLabel("数据库配置:"))
+        layoutL.addRow(QLabel("IP地址:"), dbip)
+        layoutL.addRow(QLabel("端口号:"), dbport)
+        layoutL.addRow(QLabel("用户名:"), dbusername)
+        layoutL.addRow(QLabel("密码:"), dbpassword)
+        layoutL.addRow(QLabel("数据库实例:"), dbname)
+        layoutL.addRow(QLabel("数据库类别:"), dbtype)
+
+        layoutR = QHBoxLayout()
+        tab = QTabWidget()
+        agent = {
+        "ip": QLineEdit(),
+        "port": QLineEdit(),
+        "concurrency": QLineEdit(),
+        "instance": QLineEdit(),
+        "startid": QLineEdit(),
+        "endid": QLineEdit(),
+        "delay": QLineEdit()
+        }
+
+        tab1 = QWidget()
+        agent_layout = QFormLayout()
+        agent_layout.addRow(QLabel("TPCEAgent配置:"))
+        agent_layout.addRow(QLabel("IP地址:"), agent['ip'])
+        agent_layout.addRow(QLabel("端口号:"), agent['port'])
+        agent_layout.addRow(QLabel("并发数:"), agent['concurrency'])
+        agent_layout.addRow(QLabel("实例数:"), agent['instance'])
+        agent_layout.addRow(QLabel("起始id:"), agent['startid'])
+        agent_layout.addRow(QLabel("终止id:"), agent['endid'])
+        agent_layout.addRow(QLabel("延迟:"), agent['delay'])
+        tab1.setLayout(agent_layout)
+
+        tab.addTab(tab1, 'Agent1')
+        tab.setTabPosition(QTabWidget.West)
+        layoutR.addWidget(tab)
+               
+        startBox.addLayout(layoutL)
+        startBox.addLayout(layoutR)
+
+        # 将startBox放入标签中
+        startTab.setLayout(startBox)
+        #------------configBox-------------
+        configBox = QHBoxLayout()
+
+        layoutLeft = QFormLayout()
+        toolip = QLineEdit()
+        toolport = QLineEdit()
+        mapBedUrl = QLineEdit()
+        dingdingTime = QLineEdit()
+        resultTime = QLineEdit()
+        errorTime = QLineEdit()
+        reportLanguage = QLineEdit()
+
+        toolip.setText(str(self.config_map['ip']))
+        toolport.setText(str(self.config_map['port']))
+        mapBedUrl.setText(str(self.config_map['mapBedUrl']))
+        dingdingTime.setText(str(self.config_map['dingdingTime']))
+        resultTime.setText(str(self.config_map['resultTime']))
+        errorTime.setText(str(self.config_map['errorTime']))
+        reportLanguage.setText(str(self.config_map['reportLanguage']))
+
+        layoutLeft.addRow(QLabel("工具所在IP"), toolip)
+        layoutLeft.addRow(QLabel("工具所在端口号"), toolport)
+        layoutLeft.addRow(QLabel("图床地址"), mapBedUrl)
+        layoutLeft.addRow(QLabel("钉钉消息间隔时间"), dingdingTime)
+        layoutLeft.addRow(QLabel("获取结果间隔时间"), resultTime)
+        layoutLeft.addRow(QLabel("测试异常兼容时间"), errorTime)
+        layoutLeft.addRow(QLabel("报告语言"), reportLanguage)
+
+        configBox.addLayout(layoutLeft)
+
+        #将configBox放入标签中
+        configTab.setLayout(configBox)
+
+        mainTab.addTab(startTab, '启动参数')
+        mainTab.addTab(configTab, '配置参数')
+        mainLayout.addWidget(mainTab)
+
+        self.settingBox.setLayout(mainLayout)
 
 
 
@@ -223,6 +285,7 @@ class PlotCanvas(FigureCanvas):
             y.append(random.random()*100)
 
         self.axes.plot(x,y)
+
 
 if __name__ == '__main__':
     app=QApplication(sys.argv)

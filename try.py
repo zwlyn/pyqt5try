@@ -1,46 +1,34 @@
-from PyQt5.QtWidgets import QApplication, QMainWindow, QMenu, QVBoxLayout, QSizePolicy, QMessageBox, QWidget, \
-    QPushButton,QDialog
-from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
-from matplotlib.figure import Figure
-import random
 import sys
+from PyQt5.QtGui import *
+from PyQt5.QtWidgets import *
+from PyQt5.QtCore import *
+
+class QpixmapDemo(QWidget):
+    def __init__(self,parent=None):
+        super(QpixmapDemo, self).__init__(parent)
+        self.setGeometry(300,300,800,800)
+        self.setWindowTitle('QPixmap例子')
+        self.setWindowIcon(QIcon('img/start1.png'))
+
+        layout=QVBoxLayout()
+
+        lab1=QLabel('1234')
+        lab1.setPixmap(QPixmap('img/start1.png'))
+
+        layout.addWidget(lab1)
+
+        btn = QPushButton('厉害按钮')
+        icon = QIcon('start2.png')
+        btn.setIcon(icon)
+        size = QSize(60, 60)
+        btn.setIconSize(size)
+        layout.addWidget(btn)
 
 
-
-class Ui(QDialog):
-
-    def __init__(self):
-        super().__init__()
-        self.setWindowTitle('阿威十八式')
-        self.setGeometry(10, 10, 640, 400)
-
-        m = PlotCanvas(self)
-        m.move(0,0)
-
-        button = QPushButton('按钮', self)
-        self.show()
-
-
-class PlotCanvas(FigureCanvas):
-
-    def __init__(self, parent=None):
-        fig = Figure(figsize=(5, 4), dpi=100)
-        self.axes = fig.add_subplot(111)
-
-        FigureCanvas.__init__(self, fig)
-        self.setParent(parent)
-        x = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-        y = list()
-        for i in x:
-            y.append(random.random()*100)
-
-        self.axes.plot(x,y)
+        self.setLayout(layout)
 
 if __name__ == '__main__':
-    print('start')
     app = QApplication(sys.argv)
-    ex = Ui()
+    demo =QpixmapDemo()
+    demo.show()
     sys.exit(app.exec_())
-    print('over')
-
-

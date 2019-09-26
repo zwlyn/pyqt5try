@@ -1,0 +1,11 @@
+{
+    "ip": "192.168.3.8",
+    "port": 8642,
+    "mapBedUrl": "http://39.97.226.213:18800/upload",
+    "dingdingUrl": [
+    	"https://oapi.dingtalk.com/robot/send?access_token=99c37364ccd38d5bbec915e20d335bc5aa6b8ef0acb753cf246dd629f75892e1"],
+    "dingdingTime": 60,
+    "resultTime": 10,
+    "errorTime":600,
+    "reportLanguage": "EN"
+}

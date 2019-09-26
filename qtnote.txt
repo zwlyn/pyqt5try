@@ -1,0 +1,33 @@
+QListWidget
+	addItem() 在列表中添加QListWidgetItem对象或字符串
+	addItems() 添加列表中的每个条目
+	insertItem() 在指定的索引处插入条目
+	信号：
+	currentItmeChanged 当列表中的条目发生改变时发射次信号
+	itemClicked        当点击列表中的条目时发射次信号
+
+QFormLayout --表单布局
+	认为：只能添加一列
+
+QTabWidget --选项卡栏，
+	类归属：PyQt5 -> QtWidgets -> QTabWidget
+	addTab()	将一个控件添加到Tab控件的选项卡中
+	insertTab()	将一个Tab控件的选项卡插入到指定的位置
+	removeTab()	根据指定的索引删除Tab控件
+	setCurrentIndex()	设置当前可见的选项卡所在的索引
+	setCurrentWidget()	设置当前可见的界面
+	setTabBar()	设置选项卡栏的小控件
+	setTabPosition()	设置选项卡的位置
+	QTabWidget.North:显示在页面的上方
+	QTabWidget.South:显示在页面的下方
+	QTabWidget.West:显示在页面的左侧
+	QTabWidget.East:显示在页面的右侧
+	setTabText()	定义Tab选项卡的显示值
+	QTabWidget.TabShape:
+		QTabWidget.Rounded 		默认方形
+		QTabWidget.Triangular	三角形外观
+
+
+
+
+
