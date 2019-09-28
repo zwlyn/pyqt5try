@@ -27,6 +27,93 @@ QTabWidget --选项卡栏，
 		QTabWidget.Rounded 		默认方形
 		QTabWidget.Triangular	三角形外观
 
+	self.tabWidget = QTabWidget()
+	self.tabWidget.setTabShape(QTabWidget.Triangular)
+	self.tabWidget.setDocumentMode(True)
+	self.tabWidget.setMovable(True)
+	self.tabWidget.setTabsClosable(True)
+	self.tabWidget.tabCloseRequested.connect(self.close_Tab)
+	self.setCentralWidget(self.tabWidget)
+
+
+
+
+QToolBar  --是由文本按钮,图标挥着其他小控件按钮组成的可移动面板，通常位于菜单栏下方
+	addAction() 	添加具有文本或图标的工具按钮
+	addSperator()	分组显示工具按钮
+	addWidget()		添加工具栏中按钮以外的控件
+	addToolBar()	使用QMainWindow类的方法添加一个新的工具栏
+	setMovable()	工具变得可移动
+	setOrientation()工具栏的方向可以设置为Qt.Horizontal或Qt.cetical
+
+
+事件和信号
+
+	滑动块:
+	lcd = QLCDNumber(self)
+	sld = QSlider(Qt.Horizontal, self)
+	sld.valueChanged.connect(lcd.display)
+
+补：super.__init__():
+当需要继承父类构造函数中的内容，且子类需要在父类的基础上补充时，使用super().__init__()方法。
+	class Example(QWidget):
+		def __init__(self):
+			super().__init__()
+			self.initUI()
+
+		def initUI(self):
+			self.setGeometry(300,300,250,150)
+			self.setWindowTitle('Event handler')
+			self.show()
+
+		def keyPressEvent(self, e):    	# 重写了keyPressEvent()事件处理函数
+			if e.key() == Qt.key_Escape:# 点击了Esc按钮，应用将会被终止
+				self.close()
+
+	if __name__ '__main__':
+		app = QApplication(sys.argv)
+		ex = Example()
+		sys.exit(app.exec_())
+
+sender() --用来方便地知道那个组件时信号发送者：
+	def __init__(self):
+		btn1 = QPushButton("Button 1", self)
+		btn1.move(30, 50)
+
+		btn1.clicked.connect(self.buttonClicked)
+
+	def buttonClicked(self):
+		sender = self.sender()
+		self.statusBar().showMessage(sender.text() + 'was pressed') # 在状态栏上显示被按下的按钮的标签内容
+
+发送信号
+	...#我们创建一个新的信号叫做closeApp，当出发鼠标点击事件时信号会被发射，信号连接到了QMainWindow的close()方法
+	def __init__(self):
+		self.c = Communicate()  # 信号使用pyqtSignal()方法创建，并且成为外部类Communicate类的属性。
+		self.c.closeApp.connect(self.close)
+
+	def mousePressEvent(self, event):  # 把自定义的closeApp信号连接到QMainWindow的close糟上
+		self.c.closeApp.emit()    
+
+四种于糟连接的方法：
+	cb_font = QFontComboBox(currentFontChanged=self.changeLabelFont)
+	cb_font.currentFontChanged.connect(self.changeButtonFont)
+	closeButton.pyqtConfigure(objectName='button', clicked=self.close)
+	QMetaObject.connectSlotsByName(self)
+
+
+QListWidget -- 基于条目的接口，用于从列表中添加或删除条目，列表中的每个条目都是一个QListWidgetItem对象，QListWidget可以设置多重选择
+	常用方法：
+	addItem() 			在列表中添加QListWidgetItem对象或字符串
+	addItems()			添加列表中的每个条目
+	insertItem()		在指定地索引处插入条目
+	clear()				删除列表的内容
+	setCurrentItem()	设置当前所选的条目
+	sortItems()			按升序重新排列条目
+
+	常用的信号：
+	currentItmeChanged	当列表中的条目发生改变时发射此信号
+	itemClicked			当点击列表中的条目时发射此信号
 
 
 

@@ -61,28 +61,41 @@ class TPCEAutoRunnerUI(QDialog):
         self.settingBox.resize(1220, 700)
         #设置调整宽和高
         self.settingBox.setFixedSize(1220, 700)
-        self.configBox=QGroupBox('基础参数配置')
+        self.reportBox=QGroupBox()
         self.plotBox=QGroupBox('测试图像')
 
         self.configBox_list = list()
 
         self.create_settingBox()
-        self.create_configBox()
+        self.create_reportBox()
         self.create_plotBox()
 
         self.stack=QStackedWidget(self)
 
         self.stack.addWidget(self.settingBox)
-        self.stack.addWidget(self.configBox)
         self.stack.addWidget(self.plotBox)
+        self.stack.addWidget(self.reportBox)
 
+        mainLayout =QVBoxLayout()
 
-        mainLayout = QHBoxLayout()
-        mainLayout.addWidget(self.leftlist)
-        mainLayout.addWidget(self.stack)
-        mainLayout.spacing()
-        mainLayout.addStretch(100)            
-        mainLayout.setSpacing(5)
+        menuBar = QMenuBar()
+        menu = menuBar.addMenu('logo')
+
+        mid = QWidget()
+        midLayout = QHBoxLayout()
+        midLayout.addWidget(self.leftlist)
+        midLayout.addWidget(self.stack)
+        midLayout.spacing()
+        midLayout.addStretch(100)            
+        midLayout.setSpacing(5)
+        mid.setLayout(midLayout)
+
+        statusBar = QStatusBar()
+        statusBar.showMessage('Hello man!')
+
+        mainLayout.addWidget(menuBar)
+        mainLayout.addWidget(mid)
+        mainLayout.addWidget(statusBar)
 
 
         self.setLayout(mainLayout)
@@ -98,7 +111,7 @@ class TPCEAutoRunnerUI(QDialog):
         
     def create_settingBox(self):
 
-        mainLayout = QHBoxLayout()
+        mainLayout = QVBoxLayout()
 
         mainTab = QTabWidget()
         startTab = QWidget()
@@ -149,7 +162,6 @@ class TPCEAutoRunnerUI(QDialog):
         layoutL.addRow(QLabel("数据库类别:"), dbtype)
 
         layoutR = QHBoxLayout()
-        tab = QTabWidget()
         agent = {
         "ip": QLineEdit(),
         "port": QLineEdit(),
@@ -160,7 +172,7 @@ class TPCEAutoRunnerUI(QDialog):
         "delay": QLineEdit()
         }
 
-        tab1 = QWidget()
+        agentBox = QWidget()
         agent_layout = QFormLayout()
         agent_layout.addRow(QLabel("TPCEAgent配置:"))
         agent_layout.addRow(QLabel("IP地址:"), agent['ip'])
@@ -170,12 +182,19 @@ class TPCEAutoRunnerUI(QDialog):
         agent_layout.addRow(QLabel("起始id:"), agent['startid'])
         agent_layout.addRow(QLabel("终止id:"), agent['endid'])
         agent_layout.addRow(QLabel("延迟:"), agent['delay'])
-        tab1.setLayout(agent_layout)
+        agentBox.setLayout(agent_layout)
 
-        tab.addTab(tab1, 'Agent1')
-        tab.setTabPosition(QTabWidget.West)
-        layoutR.addWidget(tab)
-               
+
+        listAgent = QListWidget()
+        listAgent.resize(300,120)
+        listAgent.addItem('新建TPCEAgent')
+        listAgent.addItem('Agent1')
+        listAgent.itemClicked.connect(self.create_agent)
+
+
+        layoutR.addWidget(listAgent)
+        layoutR.addWidget(agentBox)
+                     
         startBox.addLayout(layoutL)
         startBox.addLayout(layoutR)
 
@@ -216,38 +235,39 @@ class TPCEAutoRunnerUI(QDialog):
 
         mainTab.addTab(startTab, '启动参数')
         mainTab.addTab(configTab, '配置参数')
+
+
+
         mainLayout.addWidget(mainTab)
 
         self.settingBox.setLayout(mainLayout)
 
+    def create_agent(self, item):
+        if item.text() == '新建TPCEAgent':
+            btn = self.sender()   # 获取到被点击的按钮
+            item.addItem('11')
 
 
-    def create_configBox(self):
-        layout = QFormLayout()
-        for i in range(9):
-            self.configBox_list.append(QLineEdit())
 
-        self.configBox_list[0].setText('192.168.3.79')
-        self.configBox_list[1].setText('8642')
-        self.configBox_list[2].setText('http://39.97.226.213:18800/upload')
-        self.configBox_list[3].setText('https://oapi.dingtalk.com/robot/send?access_token=99c37364ccd38d5bbec915e20d335bc5aa6b8ef0acb753cf246dd629f75892e1')
-        self.configBox_list[4].setText('')
-        self.configBox_list[5].setText('60')
-        self.configBox_list[6].setText('10')
-        self.configBox_list[7].setText('600')
-        self.configBox_list[8].setText('EN')
+    def create_reportBox(self):
+        layout = QHBoxLayout()
+        tab_list = QTabWidget()
 
-        layout.addRow(QLabel("ip:"), self.configBox_list[0])
-        layout.addRow(QLabel("port:"), self.configBox_list[1])
-        layout.addRow(QLabel("mapBedUrl:"), self.configBox_list[2])
-        layout.addRow(QLabel("dingdingUrl:"))
-        layout.addRow(QLabel("dingdingUrl_1:"), self.configBox_list[3])
-        layout.addRow(QLabel("dingdingUrl_2:"), self.configBox_list[4])
-        layout.addRow(QLabel("dingdingTime"), self.configBox_list[5])
-        layout.addRow(QLabel("resultTime:"), self.configBox_list[6])
-        layout.addRow(QLabel("errorTime:"), self.configBox_list[7])
-        layout.addRow(QLabel("reportLanguage:"), self.configBox_list[8])
-        self.configBox.setLayout(layout)
+        pixmap_mid = QPixmap("img/ball.png")
+        midreport = QLabel()
+        midreport.setPixmap(pixmap_mid)
+
+        pixmap_best = QPixmap("img/background.png")
+        bestreport = QLabel()
+        bestreport.setPixmap(pixmap_best)
+
+
+        tab_list.addTab(midreport, '中间报告') 
+        tab_list.addTab(bestreport, '最佳报告')
+
+        layout.addWidget(tab_list)
+        self.reportBox.setLayout(layout)
+        
 
     def create_plotBox(self):
         layout = QVBoxLayout()
@@ -266,6 +286,7 @@ class TPCEAutoRunnerUI(QDialog):
             logger.info(self.startBox_list[index].text())
         for index in range(len(self.configBox_list)):
             logger.info(self.configBox_list[index].text())
+
 
     def display(self,i):
         #设置当前可见的选项卡的索引

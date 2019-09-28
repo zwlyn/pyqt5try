@@ -591,3 +591,278 @@
 2019-09-26 20:42:20,384     INFO [                  work.py       start_clicked    96] 点击了启动item，开始启动 ～～
 2019-09-26 20:42:23,971     INFO [                  work.py       start_clicked    96] 点击了启动item，开始启动 ～～
 2019-09-26 20:42:27,038     INFO [                  work.py       start_clicked    96] 点击了启动item，开始启动 ～～
+2019-09-27 10:17:38,141     INFO [                  work.py       start_clicked    96] 点击了启动item，开始启动 ～～
+2019-09-27 10:17:41,531     INFO [                  work.py       start_clicked    96] 点击了启动item，开始启动 ～～
+2019-09-27 10:17:46,441     INFO [                  work.py       start_clicked    96] 点击了启动item，开始启动 ～～
+2019-09-27 10:28:56,636     INFO [                  work.py       start_clicked    96] 点击了启动item，开始启动 ～～
+2019-09-27 10:28:57,210     INFO [                  work.py       start_clicked    96] 点击了启动item，开始启动 ～～
+2019-09-27 10:28:57,721     INFO [                  work.py       start_clicked    96] 点击了启动item，开始启动 ～～
+2019-09-27 10:33:43,973     INFO [                  work.py       start_clicked    96] 点击了启动item，开始启动 ～～
+2019-09-27 11:52:20,302     INFO [                  work.py        create_agent   285] create_agent
+2019-09-27 11:52:20,878     INFO [                  work.py        create_agent   285] create_agent
+2019-09-27 11:52:22,714     INFO [                  work.py        create_agent   285] create_agent
+2019-09-27 11:52:22,888     INFO [                  work.py        create_agent   285] create_agent
+2019-09-27 11:52:23,064     INFO [                  work.py        create_agent   285] create_agent
+2019-09-27 11:52:23,223     INFO [                  work.py        create_agent   285] create_agent
+2019-09-27 11:52:23,383     INFO [                  work.py        create_agent   285] create_agent
+2019-09-27 11:52:23,710     INFO [                  work.py        create_agent   285] create_agent
+2019-09-27 11:52:23,894     INFO [                  work.py        create_agent   285] create_agent
+2019-09-27 11:52:24,054     INFO [                  work.py        create_agent   285] create_agent
+2019-09-27 11:52:24,229     INFO [                  work.py        create_agent   285] create_agent
+2019-09-27 11:52:24,397     INFO [                  work.py        create_agent   285] create_agent
+2019-09-27 11:52:25,954     INFO [                  work.py        create_agent   285] create_agent
+2019-09-27 11:52:26,121     INFO [                  work.py        create_agent   285] create_agent
+2019-09-27 14:22:41,022     INFO [                  work.py       start_clicked    96] 点击了启动item，开始启动 ～～
+2019-09-27 14:22:53,607     INFO [                  work.py       start_clicked    96] 点击了启动item，开始启动 ～～
+2019-09-27 14:23:08,136     INFO [                  work.py       start_clicked    96] 点击了启动item，开始启动 ～～
+2019-09-27 14:23:25,335     INFO [                  work.py       start_clicked    96] 点击了启动item，开始启动 ～～
+2019-09-27 14:23:35,329     INFO [                  work.py        create_agent   285] create_agent
+2019-09-27 14:23:35,536     INFO [                  work.py        create_agent   285] create_agent
+2019-09-27 14:23:35,703     INFO [                  work.py        create_agent   285] create_agent
+2019-09-27 14:23:35,864     INFO [                  work.py        create_agent   285] create_agent
+2019-09-27 14:23:36,958     INFO [                  work.py        create_agent   285] create_agent
+2019-09-27 14:23:39,650     INFO [                  work.py        create_agent   285] create_agent
+2019-09-27 14:24:01,508     INFO [                  work.py       start_clicked    96] 点击了启动item，开始启动 ～～
+2019-09-27 15:24:13,091     INFO [                  work.py        create_agent   283] create_agent
+2019-09-27 15:24:32,605     INFO [                  work.py        create_agent   283] create_agent
+2019-09-27 15:25:06,652     INFO [                  work.py        create_agent   282] <PyQt5.QtWidgets.QPushButton object at 0x7f1b2a845558>
+2019-09-27 15:25:06,653     INFO [                  work.py        create_agent   284] create_agent
+2019-09-27 15:44:24,454     INFO [                  work.py        create_agent   282] <PyQt5.QtWidgets.QPushButton object at 0x7ff80610d558>
+2019-09-27 15:44:24,465     INFO [                  work.py        create_agent   283] <built-in method layout of TPCEAutoRunnerUI object at 0x7ff808ffb9d8>
+2019-09-27 15:44:24,465     INFO [                  work.py        create_agent   285] create_agent
+2019-09-27 15:45:23,806     INFO [                  work.py        create_agent   282] <PyQt5.QtWidgets.QPushButton object at 0x7ff4d91c8558>
+2019-09-27 15:58:35,070     INFO [                  work.py        create_agent   282] <PyQt5.QtWidgets.QPushButton object at 0x7f4fe9b01558>
+2019-09-27 16:06:51,683     INFO [                  work.py        create_agent   282] <PyQt5.QtWidgets.QPushButton object at 0x7f5ffe23b558>
+2019-09-27 16:06:51,688     INFO [                  work.py        create_agent   283] <built-in method parent of TPCEAutoRunnerUI object at 0x7f600112b5e8>
+2019-09-27 16:06:51,689     INFO [                  work.py        create_agent   284] create_agent
+2019-09-27 16:07:29,642     INFO [                  work.py        create_agent   282] <PyQt5.QtWidgets.QPushButton object at 0x7f47eaf75558>
+2019-09-27 16:07:29,643     INFO [                  work.py        create_agent   283] <built-in method parent of TPCEAutoRunnerUI object at 0x7f47ede649d8>
+2019-09-27 16:07:29,647     INFO [                  work.py        create_agent   284] <class 'builtin_function_or_method'>
+2019-09-27 16:07:29,647     INFO [                  work.py        create_agent   285] create_agent
+2019-09-27 16:08:49,323     INFO [                  work.py        create_agent   282] <PyQt5.QtWidgets.QPushButton object at 0x7fbfd7d8c558>
+2019-09-27 16:08:49,323     INFO [                  work.py        create_agent   283] <built-in method parent of TPCEAutoRunnerUI object at 0x7fbfdac795e8>
+2019-09-27 16:08:49,324     INFO [                  work.py        create_agent   284] <class 'builtin_function_or_method'>
+2019-09-27 16:11:57,700     INFO [                  work.py        create_agent   282] <PyQt5.QtWidgets.QPushButton object at 0x7f1bf99ee558>
+2019-09-27 16:11:57,700     INFO [                  work.py        create_agent   283] <built-in method parent of TPCEAutoRunnerUI object at 0x7f1bfc8de9d8>
+2019-09-27 16:11:57,700     INFO [                  work.py        create_agent   284] <class 'builtin_function_or_method'>
+2019-09-27 16:14:53,399     INFO [                  work.py        create_agent   236] <PyQt5.QtWidgets.QPushButton object at 0x7f7788694558>
+2019-09-27 16:14:53,400     INFO [                  work.py        create_agent   237] <built-in method parent of TPCEAutoRunnerUI object at 0x7f778b5819d8>
+2019-09-27 16:14:53,400     INFO [                  work.py        create_agent   238] <class 'builtin_function_or_method'>
+2019-09-27 16:14:53,401     INFO [                  work.py        create_agent   240] create_agent
+2019-09-27 16:16:55,558     INFO [                  work.py        create_agent   236] self.sender():<PyQt5.QtWidgets.QPushButton object at 0x7f3aab24d558>
+2019-09-27 16:16:55,559     INFO [                  work.py        create_agent   237] self.parent<built-in method parent of TPCEAutoRunnerUI object at 0x7f3aae13c9d8>
+2019-09-27 16:16:55,559     INFO [                  work.py        create_agent   238] type(self.parent)<class 'builtin_function_or_method'>
+2019-09-27 16:18:12,813     INFO [                  work.py        create_agent   236] self.sender():<PyQt5.QtWidgets.QPushButton object at 0x7fe494110558>
+2019-09-27 16:18:12,830     INFO [                  work.py        create_agent   237] self.parent<built-in method parent of TPCEAutoRunnerUI object at 0x7fe496ffe5e8>
+2019-09-27 16:18:12,830     INFO [                  work.py        create_agent   238] type(self.parent)<class 'builtin_function_or_method'>
+2019-09-27 16:18:12,831     INFO [                  work.py        create_agent   239] param2:False
+2019-09-27 16:18:20,311     INFO [                  work.py        create_agent   236] self.sender():<PyQt5.QtWidgets.QPushButton object at 0x7fe494110558>
+2019-09-27 16:18:20,312     INFO [                  work.py        create_agent   237] self.parent<built-in method parent of TPCEAutoRunnerUI object at 0x7fe496ffe5e8>
+2019-09-27 16:18:20,312     INFO [                  work.py        create_agent   238] type(self.parent)<class 'builtin_function_or_method'>
+2019-09-27 16:18:20,313     INFO [                  work.py        create_agent   239] param2:False
+2019-09-27 16:18:21,062     INFO [                  work.py        create_agent   236] self.sender():<PyQt5.QtWidgets.QPushButton object at 0x7fe494110558>
+2019-09-27 16:18:21,062     INFO [                  work.py        create_agent   237] self.parent<built-in method parent of TPCEAutoRunnerUI object at 0x7fe496ffe5e8>
+2019-09-27 16:18:21,062     INFO [                  work.py        create_agent   238] type(self.parent)<class 'builtin_function_or_method'>
+2019-09-27 16:18:21,065     INFO [                  work.py        create_agent   239] param2:False
+2019-09-27 16:18:21,557     INFO [                  work.py        create_agent   236] self.sender():<PyQt5.QtWidgets.QPushButton object at 0x7fe494110558>
+2019-09-27 16:18:21,558     INFO [                  work.py        create_agent   237] self.parent<built-in method parent of TPCEAutoRunnerUI object at 0x7fe496ffe5e8>
+2019-09-27 16:18:21,558     INFO [                  work.py        create_agent   238] type(self.parent)<class 'builtin_function_or_method'>
+2019-09-27 16:18:21,558     INFO [                  work.py        create_agent   239] param2:False
+2019-09-27 16:18:21,979     INFO [                  work.py        create_agent   236] self.sender():<PyQt5.QtWidgets.QPushButton object at 0x7fe494110558>
+2019-09-27 16:18:21,980     INFO [                  work.py        create_agent   237] self.parent<built-in method parent of TPCEAutoRunnerUI object at 0x7fe496ffe5e8>
+2019-09-27 16:18:21,981     INFO [                  work.py        create_agent   238] type(self.parent)<class 'builtin_function_or_method'>
+2019-09-27 16:18:21,981     INFO [                  work.py        create_agent   239] param2:False
+2019-09-27 16:19:07,568     INFO [                  work.py        create_agent   236] self.sender():<PyQt5.QtWidgets.QPushButton object at 0x7f01a794e558>
+2019-09-27 16:19:07,569     INFO [                  work.py        create_agent   237] self.parent<built-in method parent of TPCEAutoRunnerUI object at 0x7f01aa83c9d8>
+2019-09-27 16:19:07,570     INFO [                  work.py        create_agent   238] type(self.parent)<class 'builtin_function_or_method'>
+2019-09-27 16:19:59,680     INFO [                  work.py        create_agent   236] self.sender(): <PyQt5.QtWidgets.QPushButton object at 0x7f335140e558>
+2019-09-27 16:19:59,682     INFO [                  work.py        create_agent   237] self.parent: <built-in method parent of TPCEAutoRunnerUI object at 0x7f33542fc9d8>
+2019-09-27 16:19:59,685     INFO [                  work.py        create_agent   239] type(self.parent): <class 'builtin_function_or_method'>
+2019-09-27 16:21:28,377     INFO [                  work.py        create_agent   236] self.sender(): <PyQt5.QtWidgets.QPushButton object at 0x7f397a7bb5e8>
+2019-09-27 16:21:28,378     INFO [                  work.py        create_agent   237] self.parent: <built-in method parent of TPCEAutoRunnerUI object at 0x7f397d6a9678>
+2019-09-27 16:22:17,929     INFO [                  work.py        create_agent   236] self.sender(): <PyQt5.QtWidgets.QPushButton object at 0x7f9932191558>
+2019-09-27 16:22:17,930     INFO [                  work.py        create_agent   237] self.parent: <built-in method parent of TPCEAutoRunnerUI object at 0x7f99350809d8>
+2019-09-27 16:22:17,930     INFO [                  work.py        create_agent   238] <built-in method layout of QPushButton object at 0x7f9932191558>
+2019-09-27 16:22:17,931     INFO [                  work.py        create_agent   240] type(self.parent): <class 'builtin_function_or_method'>
+2019-09-27 16:31:26,638     INFO [                  work.py        create_agent   237] msgFalse
+2019-09-27 16:31:30,614     INFO [                  work.py        create_agent   237] msgFalse
+2019-09-27 16:31:31,149     INFO [                  work.py        create_agent   237] msgFalse
+2019-09-27 16:31:31,525     INFO [                  work.py        create_agent   237] msgFalse
+2019-09-27 16:31:31,909     INFO [                  work.py        create_agent   237] msgFalse
+2019-09-27 16:31:39,980     INFO [                  work.py        create_agent   237] msgFalse
+2019-09-27 16:31:40,369     INFO [                  work.py        create_agent   237] msgFalse
+2019-09-27 16:31:40,721     INFO [                  work.py        create_agent   237] msgFalse
+2019-09-27 16:31:41,056     INFO [                  work.py        create_agent   237] msgFalse
+2019-09-27 16:31:41,367     INFO [                  work.py        create_agent   237] msgFalse
+2019-09-27 16:31:41,639     INFO [                  work.py        create_agent   237] msgFalse
+2019-09-27 16:31:41,903     INFO [                  work.py        create_agent   237] msgFalse
+2019-09-27 16:31:42,190     INFO [                  work.py        create_agent   237] msgFalse
+2019-09-27 16:31:42,581     INFO [                  work.py        create_agent   237] msgFalse
+2019-09-27 16:31:43,053     INFO [                  work.py        create_agent   237] msgFalse
+2019-09-27 16:31:43,675     INFO [                  work.py        create_agent   237] msgFalse
+2019-09-27 16:31:44,258     INFO [                  work.py        create_agent   237] msgFalse
+2019-09-27 16:31:44,921     INFO [                  work.py        create_agent   237] msgFalse
+2019-09-27 16:31:45,472     INFO [                  work.py        create_agent   237] msgFalse
+2019-09-27 16:37:19,686     INFO [                  work.py        create_agent   237] msgFalse
+2019-09-27 16:37:39,112     INFO [                  work.py        create_agent   237] msgFalse
+2019-09-27 16:37:40,462     INFO [                  work.py        create_agent   237] msgFalse
+2019-09-27 16:37:41,172     INFO [                  work.py        create_agent   237] msgFalse
+2019-09-27 16:40:11,872     INFO [                  work.py        create_agent   237] msgFalse
+2019-09-27 16:42:15,975     INFO [                  work.py        create_agent   237] msgFalse
+2019-09-27 16:42:26,381     INFO [                  work.py        create_agent   237] msgFalse
+2019-09-27 16:42:26,382     INFO [                  work.py        create_agent   239] (0, 0, 0, 0)
+2019-09-27 16:43:00,138     INFO [                  work.py        create_agent   237] msgFalse
+2019-09-27 16:43:00,139     INFO [                  work.py        create_agent   239] <PyQt5.QtWidgets.QWidget object at 0x7f7ba90d3438>
+2019-09-27 16:44:50,677     INFO [                  work.py        create_agent   237] msgFalse
+2019-09-27 16:44:50,678     INFO [                  work.py        create_agent   239] <PyQt5.QtWidgets.QWidget object at 0x7f7cd9ada4c8>
+2019-09-27 16:52:37,177     INFO [                  work.py        create_agent   237] msgFalse
+2019-09-27 16:52:37,178     INFO [                  work.py        create_agent   239] <PyQt5.QtWidgets.QWidget object at 0x7f81c05774c8>
+2019-09-27 16:53:05,221     INFO [                  work.py        create_agent   237] msgFalse
+2019-09-27 16:53:05,222     INFO [                  work.py        create_agent   239] <PyQt5.QtWidgets.QWidget object at 0x7fb9c2c75438>
+2019-09-27 16:53:05,222     INFO [                  work.py        create_agent   242] <built-in method layout of QWidget object at 0x7fb9c2c75438>
+2019-09-27 16:56:47,225     INFO [                  work.py        create_agent   237] msgFalse
+2019-09-27 16:56:47,225     INFO [                  work.py        create_agent   239] <PyQt5.QtWidgets.QWidget object at 0x7f5acf49a4c8>
+2019-09-27 16:56:47,226     INFO [                  work.py        create_agent   242] <PyQt5.QtWidgets.QWidget object at 0x7f5acf49a4c8>
+2019-09-27 16:58:13,597     INFO [                  work.py   create_settingBox   184] <PyQt5.QtWidgets.QWidget object at 0x7f55fb1d14c8>
+2019-09-27 16:58:13,598     INFO [                  work.py   create_settingBox   185] <PyQt5.QtWidgets.QPushButton object at 0x7f55fb1d15e8>
+2019-09-27 16:58:16,721     INFO [                  work.py        create_agent   240] msgFalse
+2019-09-27 16:58:16,721     INFO [                  work.py        create_agent   242] <PyQt5.QtWidgets.QWidget object at 0x7f55fb1d14c8>
+2019-09-27 16:58:16,725     INFO [                  work.py        create_agent   245] <PyQt5.QtWidgets.QWidget object at 0x7f55fb1d14c8>
+2019-09-27 16:58:49,422     INFO [                  work.py        create_agent   240] msgFalse
+2019-09-27 16:58:49,423     INFO [                  work.py        create_agent   242] <PyQt5.QtWidgets.QWidget object at 0x7f55fb1d14c8>
+2019-09-27 16:58:49,424     INFO [                  work.py        create_agent   245] <PyQt5.QtWidgets.QWidget object at 0x7f55fb1d14c8>
+2019-09-27 16:59:54,590     INFO [                  work.py   create_settingBox   184] tabBox<PyQt5.QtWidgets.QWidget object at 0x7fb60c91d4c8>
+2019-09-27 16:59:54,591     INFO [                  work.py   create_settingBox   185] btn1<PyQt5.QtWidgets.QPushButton object at 0x7fb60c91d5e8>
+2019-09-27 16:59:56,267     INFO [                  work.py        create_agent   240] msgFalse
+2019-09-27 16:59:56,267     INFO [                  work.py        create_agent   242] <PyQt5.QtWidgets.QWidget object at 0x7fb60c91d4c8>
+2019-09-27 16:59:56,268     INFO [                  work.py        create_agent   245] <PyQt5.QtWidgets.QWidget object at 0x7fb60c91d4c8>
+2019-09-27 17:00:13,822     INFO [                  work.py   create_settingBox   184] tabBox:  <PyQt5.QtWidgets.QWidget object at 0x7fbde03104c8>
+2019-09-27 17:00:13,823     INFO [                  work.py   create_settingBox   185] btn1:  <PyQt5.QtWidgets.QPushButton object at 0x7fbde03105e8>
+2019-09-27 17:00:17,007     INFO [                  work.py        create_agent   240] msgFalse
+2019-09-27 17:00:17,008     INFO [                  work.py        create_agent   242] <PyQt5.QtWidgets.QWidget object at 0x7fbde03104c8>
+2019-09-27 17:00:17,008     INFO [                  work.py        create_agent   245] <PyQt5.QtWidgets.QWidget object at 0x7fbde03104c8>
+2019-09-27 17:01:42,856     INFO [                  work.py   create_settingBox   184] tabBox:  <PyQt5.QtWidgets.QWidget object at 0x7f6a138544c8>
+2019-09-27 17:01:42,857     INFO [                  work.py   create_settingBox   185] btn1:  <PyQt5.QtWidgets.QPushButton object at 0x7f6a138545e8>
+2019-09-27 17:01:42,858     INFO [                  work.py   create_settingBox   186] layoutR_tab<PyQt5.QtWidgets.QVBoxLayout object at 0x7f6a13854558>
+2019-09-27 17:01:45,370     INFO [                  work.py        create_agent   241] msgFalse
+2019-09-27 17:01:45,370     INFO [                  work.py        create_agent   243] <PyQt5.QtWidgets.QWidget object at 0x7f6a138544c8>
+2019-09-27 17:01:45,372     INFO [                  work.py        create_agent   246] <built-in method layout of QWidget object at 0x7f6a138544c8>
+2019-09-27 17:02:33,091     INFO [                  work.py        create_agent   241] msgFalse
+2019-09-27 17:02:33,091     INFO [                  work.py        create_agent   243] <PyQt5.QtWidgets.QWidget object at 0x7f6a138544c8>
+2019-09-27 17:02:33,093     INFO [                  work.py        create_agent   246] <built-in method layout of QWidget object at 0x7f6a138544c8>
+2019-09-27 17:25:13,293     INFO [                  work.py   create_settingBox   184] tabBox:  <PyQt5.QtWidgets.QWidget object at 0x7f8929a454c8>
+2019-09-27 17:25:13,299     INFO [                  work.py   create_settingBox   185] btn1:  <PyQt5.QtWidgets.QPushButton object at 0x7f8929a455e8>
+2019-09-27 17:25:13,300     INFO [                  work.py   create_settingBox   186] layoutR_tab:  <PyQt5.QtWidgets.QVBoxLayout object at 0x7f8929a45558>
+2019-09-27 17:25:15,965     INFO [                  work.py        create_agent   241] msgFalse
+2019-09-27 17:25:15,966     INFO [                  work.py        create_agent   243] <PyQt5.QtWidgets.QWidget object at 0x7f8929a454c8>
+2019-09-27 17:25:15,970     INFO [                  work.py        create_agent   246] <built-in method layout of QWidget object at 0x7f8929a454c8>
+2019-09-27 17:25:17,125     INFO [                  work.py        create_agent   241] msgFalse
+2019-09-27 17:25:17,126     INFO [                  work.py        create_agent   243] <PyQt5.QtWidgets.QWidget object at 0x7f8929a454c8>
+2019-09-27 17:25:17,126     INFO [                  work.py        create_agent   246] <built-in method layout of QWidget object at 0x7f8929a454c8>
+2019-09-27 17:25:23,824     INFO [                  work.py       start_clicked    96] 点击了启动item，开始启动 ～～
+2019-09-27 17:26:20,901     INFO [                  work.py   create_settingBox   184] tabBox:  <PyQt5.QtWidgets.QWidget object at 0x7fe67629c4c8>
+2019-09-27 17:26:20,903     INFO [                  work.py   create_settingBox   185] btn1:  <PyQt5.QtWidgets.QPushButton object at 0x7fe67629c5e8>
+2019-09-27 17:26:20,905     INFO [                  work.py   create_settingBox   186] layoutR_tab:  <PyQt5.QtWidgets.QVBoxLayout object at 0x7fe67629c558>
+2019-09-27 17:26:24,442     INFO [                  work.py       start_clicked    96] 点击了启动item，开始启动 ～～
+2019-09-27 17:26:29,980     INFO [                  work.py       start_clicked    96] 点击了启动item，开始启动 ～～
+2019-09-27 17:26:31,026     INFO [                  work.py       start_clicked    96] 点击了启动item，开始启动 ～～
+2019-09-27 17:26:31,529     INFO [                  work.py       start_clicked    96] 点击了启动item，开始启动 ～～
+2019-09-27 17:26:31,809     INFO [                  work.py       start_clicked    96] 点击了启动item，开始启动 ～～
+2019-09-27 17:26:31,977     INFO [                  work.py       start_clicked    96] 点击了启动item，开始启动 ～～
+2019-09-27 17:26:32,152     INFO [                  work.py       start_clicked    96] 点击了启动item，开始启动 ～～
+2019-09-27 17:26:32,312     INFO [                  work.py       start_clicked    96] 点击了启动item，开始启动 ～～
+2019-09-27 17:26:32,464     INFO [                  work.py       start_clicked    96] 点击了启动item，开始启动 ～～
+2019-09-27 17:26:32,616     INFO [                  work.py       start_clicked    96] 点击了启动item，开始启动 ～～
+2019-09-27 17:26:32,783     INFO [                  work.py       start_clicked    96] 点击了启动item，开始启动 ～～
+2019-09-27 17:26:32,944     INFO [                  work.py       start_clicked    96] 点击了启动item，开始启动 ～～
+2019-09-27 17:33:48,652     INFO [                  work.py   create_settingBox   184] tabBox:  <PyQt5.QtWidgets.QWidget object at 0x7fe4f87264c8>
+2019-09-27 17:33:48,658     INFO [                  work.py   create_settingBox   185] btn1:  <PyQt5.QtWidgets.QPushButton object at 0x7fe4f87265e8>
+2019-09-27 17:33:48,659     INFO [                  work.py   create_settingBox   186] layoutR_tab:  <PyQt5.QtWidgets.QVBoxLayout object at 0x7fe4f8726558>
+2019-09-27 17:34:30,747     INFO [                  work.py   create_settingBox   184] tabBox:  <PyQt5.QtWidgets.QWidget object at 0x7f7a4b2a14c8>
+2019-09-27 17:34:30,748     INFO [                  work.py   create_settingBox   185] btn1:  <PyQt5.QtWidgets.QPushButton object at 0x7f7a4b2a15e8>
+2019-09-27 17:34:30,748     INFO [                  work.py   create_settingBox   186] layoutR_tab:  <PyQt5.QtWidgets.QVBoxLayout object at 0x7f7a4b2a1558>
+2019-09-27 17:34:52,327     INFO [                  work.py   create_settingBox   184] tabBox:  <PyQt5.QtWidgets.QWidget object at 0x7faea02ea4c8>
+2019-09-27 17:34:52,328     INFO [                  work.py   create_settingBox   185] btn1:  <PyQt5.QtWidgets.QPushButton object at 0x7faea02ea5e8>
+2019-09-27 17:34:52,329     INFO [                  work.py   create_settingBox   186] layoutR_tab:  <PyQt5.QtWidgets.QVBoxLayout object at 0x7faea02ea558>
+2019-09-27 17:35:30,633     INFO [                  work.py   create_settingBox   184] tabBox:  <PyQt5.QtWidgets.QWidget object at 0x7f30bef024c8>
+2019-09-27 17:35:30,634     INFO [                  work.py   create_settingBox   185] btn1:  <PyQt5.QtWidgets.QPushButton object at 0x7f30bef025e8>
+2019-09-27 17:35:30,634     INFO [                  work.py   create_settingBox   186] layoutR_tab:  <PyQt5.QtWidgets.QVBoxLayout object at 0x7f30bef02558>
+2019-09-27 17:35:43,904     INFO [                  work.py       start_clicked    96] 点击了启动item，开始启动 ～～
+2019-09-27 17:35:51,830     INFO [                  work.py        create_agent   241] msgFalse
+2019-09-27 17:35:51,831     INFO [                  work.py        create_agent   243] <PyQt5.QtWidgets.QWidget object at 0x7f30bef024c8>
+2019-09-27 17:35:51,831     INFO [                  work.py        create_agent   246] <built-in method layout of QWidget object at 0x7f30bef024c8>
+2019-09-27 17:35:58,188     INFO [                  work.py       start_clicked    96] 点击了启动item，开始启动 ～～
+2019-09-27 17:39:05,558     INFO [                  work.py   create_settingBox   184] tabBox:  <PyQt5.QtWidgets.QWidget object at 0x7f18dabf6558>
+2019-09-27 17:39:05,559     INFO [                  work.py   create_settingBox   185] btn1:  <PyQt5.QtWidgets.QPushButton object at 0x7f18dabf6678>
+2019-09-27 17:39:05,560     INFO [                  work.py   create_settingBox   186] layoutR_tab:  <PyQt5.QtWidgets.QVBoxLayout object at 0x7f18dabf65e8>
+2019-09-27 17:40:13,500     INFO [                  work.py   create_settingBox   184] tabBox:  <PyQt5.QtWidgets.QWidget object at 0x7f26d81f74c8>
+2019-09-27 17:40:13,501     INFO [                  work.py   create_settingBox   185] btn1:  <PyQt5.QtWidgets.QPushButton object at 0x7f26d81f75e8>
+2019-09-27 17:40:13,501     INFO [                  work.py   create_settingBox   186] layoutR_tab:  <PyQt5.QtWidgets.QVBoxLayout object at 0x7f26d81f7558>
+2019-09-27 17:40:18,925     INFO [                  work.py   create_settingBox   184] tabBox:  <PyQt5.QtWidgets.QWidget object at 0x7f42dbb764c8>
+2019-09-27 17:40:18,926     INFO [                  work.py   create_settingBox   185] btn1:  <PyQt5.QtWidgets.QPushButton object at 0x7f42dbb765e8>
+2019-09-27 17:40:18,926     INFO [                  work.py   create_settingBox   186] layoutR_tab:  <PyQt5.QtWidgets.QVBoxLayout object at 0x7f42dbb76558>
+2019-09-27 17:40:38,242     INFO [                  work.py   create_settingBox   184] tabBox:  <PyQt5.QtWidgets.QWidget object at 0x7f9c0135d4c8>
+2019-09-27 17:40:38,243     INFO [                  work.py   create_settingBox   185] btn1:  <PyQt5.QtWidgets.QPushButton object at 0x7f9c0135d5e8>
+2019-09-27 17:40:38,244     INFO [                  work.py   create_settingBox   186] layoutR_tab:  <PyQt5.QtWidgets.QVBoxLayout object at 0x7f9c0135d558>
+2019-09-27 17:42:31,098     INFO [                  work.py   create_settingBox   184] tabBox:  <PyQt5.QtWidgets.QWidget object at 0x7fda1dab74c8>
+2019-09-27 17:42:31,099     INFO [                  work.py   create_settingBox   185] btn1:  <PyQt5.QtWidgets.QPushButton object at 0x7fda1dab75e8>
+2019-09-27 17:42:31,099     INFO [                  work.py   create_settingBox   186] layoutR_tab:  <PyQt5.QtWidgets.QVBoxLayout object at 0x7fda1dab7558>
+2019-09-27 17:42:33,161     INFO [                  work.py       start_clicked    96] 点击了启动item，开始启动 ～～
+2019-09-27 17:43:32,621     INFO [                  work.py   create_settingBox   184] tabBox:  <PyQt5.QtWidgets.QWidget object at 0x7f760e16d4c8>
+2019-09-27 17:43:32,622     INFO [                  work.py   create_settingBox   185] btn1:  <PyQt5.QtWidgets.QPushButton object at 0x7f760e16d5e8>
+2019-09-27 17:43:32,622     INFO [                  work.py   create_settingBox   186] layoutR_tab:  <PyQt5.QtWidgets.QVBoxLayout object at 0x7f760e16d558>
+2019-09-27 17:43:42,858     INFO [                  work.py       start_clicked    96] 点击了启动item，开始启动 ～～
+2019-09-27 17:43:46,036     INFO [                  work.py       start_clicked    96] 点击了启动item，开始启动 ～～
+2019-09-27 17:43:49,365     INFO [                  work.py       start_clicked    96] 点击了启动item，开始启动 ～～
+2019-09-27 17:43:56,270     INFO [                  work.py       start_clicked    96] 点击了启动item，开始启动 ～～
+2019-09-27 17:45:05,217     INFO [                  work.py   create_settingBox   184] tabBox:  <PyQt5.QtWidgets.QWidget object at 0x7f894cab24c8>
+2019-09-27 17:45:05,217     INFO [                  work.py   create_settingBox   185] btn1:  <PyQt5.QtWidgets.QPushButton object at 0x7f894cab25e8>
+2019-09-27 17:45:05,217     INFO [                  work.py   create_settingBox   186] layoutR_tab:  <PyQt5.QtWidgets.QVBoxLayout object at 0x7f894cab2558>
+2019-09-27 17:45:09,125     INFO [                  work.py       start_clicked    96] 点击了启动item，开始启动 ～～
+2019-09-27 17:45:52,025     INFO [                  work.py   create_settingBox   184] tabBox:  <PyQt5.QtWidgets.QWidget object at 0x7fbd13a874c8>
+2019-09-27 17:45:52,026     INFO [                  work.py   create_settingBox   185] btn1:  <PyQt5.QtWidgets.QPushButton object at 0x7fbd13a875e8>
+2019-09-27 17:45:52,026     INFO [                  work.py   create_settingBox   186] layoutR_tab:  <PyQt5.QtWidgets.QVBoxLayout object at 0x7fbd13a87558>
+2019-09-27 17:45:57,179     INFO [                  work.py       start_clicked    96] 点击了启动item，开始启动 ～～
+2019-09-27 17:46:00,970     INFO [                  work.py       start_clicked    96] 点击了启动item，开始启动 ～～
+2019-09-27 17:46:06,794     INFO [                  work.py   create_settingBox   184] tabBox:  <PyQt5.QtWidgets.QWidget object at 0x7fbdf3dad4c8>
+2019-09-27 17:46:06,794     INFO [                  work.py   create_settingBox   185] btn1:  <PyQt5.QtWidgets.QPushButton object at 0x7fbdf3dad5e8>
+2019-09-27 17:46:06,795     INFO [                  work.py   create_settingBox   186] layoutR_tab:  <PyQt5.QtWidgets.QVBoxLayout object at 0x7fbdf3dad558>
+2019-09-27 17:46:08,708     INFO [                  work.py       start_clicked    96] 点击了启动item，开始启动 ～～
+2019-09-27 17:46:28,015     INFO [                  work.py   create_settingBox   184] tabBox:  <PyQt5.QtWidgets.QWidget object at 0x7fb8c78fb4c8>
+2019-09-27 17:46:28,016     INFO [                  work.py   create_settingBox   185] btn1:  <PyQt5.QtWidgets.QPushButton object at 0x7fb8c78fb5e8>
+2019-09-27 17:46:28,016     INFO [                  work.py   create_settingBox   186] layoutR_tab:  <PyQt5.QtWidgets.QVBoxLayout object at 0x7fb8c78fb558>
+2019-09-27 17:48:58,970     INFO [                  work.py   create_settingBox   184] tabBox:  <PyQt5.QtWidgets.QWidget object at 0x7fc376d214c8>
+2019-09-27 17:48:58,973     INFO [                  work.py   create_settingBox   185] btn1:  <PyQt5.QtWidgets.QPushButton object at 0x7fc376d215e8>
+2019-09-27 17:48:58,973     INFO [                  work.py   create_settingBox   186] layoutR_tab:  <PyQt5.QtWidgets.QVBoxLayout object at 0x7fc376d21558>
+2019-09-27 17:56:56,104     INFO [                  work.py   create_settingBox   193] tabBox:  <PyQt5.QtWidgets.QWidget object at 0x7f26316364c8>
+2019-09-27 17:56:56,105     INFO [                  work.py   create_settingBox   194] btn1:  <PyQt5.QtWidgets.QPushButton object at 0x7f26316365e8>
+2019-09-27 17:56:56,106     INFO [                  work.py   create_settingBox   195] layoutR_tab:  <PyQt5.QtWidgets.QVBoxLayout object at 0x7f2631636558>
+2019-09-27 17:57:13,476     INFO [                  work.py   create_settingBox   193] tabBox:  <PyQt5.QtWidgets.QWidget object at 0x7fc0da4824c8>
+2019-09-27 17:57:13,476     INFO [                  work.py   create_settingBox   194] btn1:  <PyQt5.QtWidgets.QPushButton object at 0x7fc0da4825e8>
+2019-09-27 17:57:13,477     INFO [                  work.py   create_settingBox   195] layoutR_tab:  <PyQt5.QtWidgets.QVBoxLayout object at 0x7fc0da482558>
+2019-09-27 17:59:39,196     INFO [                  work.py   create_settingBox   196] tabBox:  <PyQt5.QtWidgets.QWidget object at 0x7f8afc9244c8>
+2019-09-27 17:59:39,197     INFO [                  work.py   create_settingBox   197] btn1:  <PyQt5.QtWidgets.QPushButton object at 0x7f8afc9245e8>
+2019-09-27 17:59:39,197     INFO [                  work.py   create_settingBox   198] layoutR_tab:  <PyQt5.QtWidgets.QVBoxLayout object at 0x7f8afc924558>
+2019-09-27 18:01:11,362     INFO [                  work.py   create_settingBox   197] tabBox:  <PyQt5.QtWidgets.QWidget object at 0x7f03ac1ed4c8>
+2019-09-27 18:01:11,372     INFO [                  work.py   create_settingBox   198] btn1:  <PyQt5.QtWidgets.QPushButton object at 0x7f03ac1ed5e8>
+2019-09-27 18:01:11,373     INFO [                  work.py   create_settingBox   199] layoutR_tab:  <PyQt5.QtWidgets.QVBoxLayout object at 0x7f03ac1ed558>
+2019-09-27 18:02:51,390     INFO [                  work.py   create_settingBox   197] tabBox:  <PyQt5.QtWidgets.QWidget object at 0x7fd94b0af438>
+2019-09-27 18:02:51,391     INFO [                  work.py   create_settingBox   198] btn1:  <PyQt5.QtWidgets.QPushButton object at 0x7fd94b0af558>
+2019-09-27 18:02:51,391     INFO [                  work.py   create_settingBox   199] layoutR_tab:  <PyQt5.QtWidgets.QVBoxLayout object at 0x7fd94b0af4c8>
+2019-09-27 18:02:52,879     INFO [                  work.py        create_agent   254] msgFalse
+2019-09-27 18:02:52,880     INFO [                  work.py        create_agent   256] <PyQt5.QtWidgets.QWidget object at 0x7fd94b0af438>
+2019-09-27 18:02:52,880     INFO [                  work.py        create_agent   259] <built-in method layout of QWidget object at 0x7fd94b0af438>
+2019-09-27 18:02:52,882     INFO [                  work.py        create_agent   260] <built-in method layout of QPushButton object at 0x7fd94b0af558>
+2019-09-27 18:05:00,758     INFO [                  work.py        create_agent   254] msgFalse
+2019-09-27 18:05:00,758     INFO [                  work.py        create_agent   256] <PyQt5.QtWidgets.QWidget object at 0x7fd94b0af438>
+2019-09-27 18:05:00,759     INFO [                  work.py        create_agent   259] <built-in method layout of QWidget object at 0x7fd94b0af438>
+2019-09-27 18:05:00,759     INFO [                  work.py        create_agent   260] <built-in method layout of QPushButton object at 0x7fd94b0af558>
+2019-09-27 18:26:07,199     INFO [                  work.py        create_agent   248] <PyQt5.QtWidgets.QWidget object at 0x7ff22bcd4798>
+2019-09-27 18:26:07,205     INFO [                  work.py        create_agent   251] <built-in method layout of QWidget object at 0x7ff22bcd4798>
+2019-09-27 18:26:07,206     INFO [                  work.py        create_agent   252] <built-in method layout of QListWidget object at 0x7ff22a8dd4c8>
+2019-09-27 18:27:32,797     INFO [                  work.py        create_agent   248] <PyQt5.QtWidgets.QWidget object at 0x7f8b7f8da708>
+2019-09-27 18:27:32,799     INFO [                  work.py        create_agent   251] <built-in method layout of QWidget object at 0x7f8b7f8da708>
+2019-09-27 18:27:32,799     INFO [                  work.py        create_agent   252] <built-in method layout of QListWidget object at 0x7f8b7e4e2438>
+2019-09-27 18:28:18,035     INFO [                  work.py        create_agent   248] <PyQt5.QtWidgets.QWidget object at 0x7f55a1baf708>
+2019-09-27 18:28:18,037     INFO [                  work.py        create_agent   251] <built-in method layout of QWidget object at 0x7f55a1baf708>
+2019-09-27 18:28:18,038     INFO [                  work.py        create_agent   252] <built-in method layout of QListWidget object at 0x7f55a07b6438>
