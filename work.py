@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 # -*- coding-utf_8 -*-
 import os
+import re
 import sys
 import json
 from PyQt5.QtWidgets import (QApplication, QComboBox, QDialog,
@@ -50,11 +51,12 @@ class TPCEAutoRunnerUI(QDialog):
         self.leftlist.itemClicked.connect(self.start_clicked)
 
         self.leftlist.setStyleSheet("QListWidget{color:rgb(0,0,0); background:rgb(255,255,255);border:0px solid gray;}"
-                                  "QListWidget::Item{height:50px;border:0px solid gray;padding-left:0;}"
-                                  "QListWidget::Item:hover{color:rgb(0,255,0);border:0px solid gray;}"
-                                  #"QListWidget::Item:{color:rgb(0,0,0);border:0px solid gray;}"
-                                  "QListWidget::Item:selected:active{background:rgb();color:rgb(0,0,0);border-width:0;}"
-                                  )
+                                     "QListWidget::Item{height:40px;border:0px solid gray;padding-left:0;color:rgb(0,0,0);}"
+                                     "QListWidget::Item:hover{color:rgb(0,200,200);border:0px solid gray;}"
+                                     "QListWidget::Item:{color:rgb(0,0,0);border:0px solid gray;}"
+                                     "QListWidget::Item:selected:active{background:rgb();color:rgb(0,0,0);border-width:0;}"
+                                     "QListWidget::Item[0]{color:rgb(255,0,0);border:0px solid gray;}"
+                                    )
 
 
         self.settingBox=QGroupBox()
@@ -66,9 +68,9 @@ class TPCEAutoRunnerUI(QDialog):
 
         self.configBox_list = list()
 
-        self.create_settingBox()
-        self.create_reportBox()
-        self.create_plotBox()
+        self.init_settingBox()
+        self.init_reportBox()
+        self.init_plotBox()
 
         self.stack=QStackedWidget(self)
 
@@ -97,19 +99,43 @@ class TPCEAutoRunnerUI(QDialog):
         mainLayout.addWidget(mid)
         mainLayout.addWidget(statusBar)
 
-
         self.setLayout(mainLayout)
 
         self.leftlist.currentRowChanged.connect(self.display)
 
         self.show()
 
+        # 每5秒存储一次结果
+        self.timer = QTimer(self)
+        self.timer.timeout.connect(self.save_date)
+
+        self.timer.start(5000)
+
+    def save_date(self):
+        with open('start.json', 'w') as f:
+            f.write(json.dumps(self.start_map, indent=4))
+
+    # 关闭窗口时会执行累的close方法，并触发QCloseEvent信号，进而执行closeEvent(self,QCloseEvent)方法
+    def closeEvent(self, event):
+        # 退出前对内存中的改变进行存储
+        with open('start.json', 'w') as f:
+            f.write(json.dumps(self.start_map, indent=4))
+        logger.info('改变已经保存')
+        reply = QMessageBox.question(self, '本程序',
+                                           "是否要退出程序？",
+                                           QMessageBox.Yes | QMessageBox.No,
+                                           QMessageBox.No)
+        if reply == QMessageBox.Yes:
+            event.accept()
+        else:
+            event.ignore()
+
+
     def start_clicked(self,item):
         if item.text() == '启动':
             logger.info('点击了启动item，开始启动 ～～')
-
-        
-    def create_settingBox(self):
+    
+    def init_settingBox(self):
 
         mainLayout = QVBoxLayout()
 
@@ -117,52 +143,72 @@ class TPCEAutoRunnerUI(QDialog):
         startTab = QWidget()
         configTab = QWidget()
 
-
         #--------------startBox----------------
         startBox = QHBoxLayout()
 
         layoutL = QFormLayout()
 
-        customer = QLineEdit()
-        initialdays = QLineEdit()
-        scalefactor = QLineEdit()
-        uptime = QLineEdit()
-        testtime = QLineEdit()
-        dbip = QLineEdit()
-        dbport = QLineEdit()
-        dbusername = QLineEdit()
-        dbpassword = QLineEdit()
-        dbname = QLineEdit()
-        dbtype = QLineEdit()
+        self.startArgs = {
+        'customer': QLineEdit(),
+        'initialdays': QLineEdit(),
+        'scalefactor': QLineEdit(),
+        'uptime': QLineEdit(),
+        'testtime': QLineEdit(),
+        'dbconfig':{
+            'ip': QLineEdit(),
+            'dbname': QLineEdit(),
+            'port': QLineEdit(),
+            'username': QLineEdit(),
+            'dbtype': QLineEdit(),
+            'password': QLineEdit(),
+            'instance': QLineEdit()
+        }
+        }
 
-        customer.setText(str(self.start_map['customer']))
-        initialdays.setText(str(self.start_map['initialdays']))
-        scalefactor.setText(str(self.start_map['scalefactor']))
-        uptime.setText(str(self.start_map['uptime']))
-        testtime.setText(str(self.start_map['testtime']))
+        self.startArgs['customer'].setText(str(self.start_map['customer']))
+        self.startArgs['initialdays'].setText(str(self.start_map['initialdays']))
+        self.startArgs['scalefactor'].setText(str(self.start_map['scalefactor']))
+        self.startArgs['uptime'].setText(str(self.start_map['uptime']))
+        self.startArgs['testtime'].setText(str(self.start_map['testtime']))
 
-        dbip.setText(str(self.start_map['dbconfig']['ip']))
-        dbport.setText(str(self.start_map['dbconfig']['port']))
-        dbusername.setText(str(self.start_map['dbconfig']['username']))
-        dbpassword.setText(str(self.start_map['dbconfig']['password']))
-        dbname.setText(str(self.start_map['dbconfig']['dbname']))
-        dbtype.setText(str(self.start_map['dbconfig']['dbtype']))
+        self.startArgs['dbconfig']['ip'].setText(str(self.start_map['dbconfig']['ip']))
+        self.startArgs['dbconfig']['port'].setText(str(self.start_map['dbconfig']['port']))
+        self.startArgs['dbconfig']['username'].setText(str(self.start_map['dbconfig']['username']))
+        self.startArgs['dbconfig']['password'].setText(str(self.start_map['dbconfig']['password']))
+        self.startArgs['dbconfig']['dbname'].setText(str(self.start_map['dbconfig']['dbname']))
+        self.startArgs['dbconfig']['dbtype'].setText(str(self.start_map['dbconfig']['dbtype']))
 
-        layoutL.addRow(QLabel("用户数量:"), customer)
-        layoutL.addRow(QLabel("初始天数:"), initialdays)
-        layoutL.addRow(QLabel("比例因子:"), scalefactor)
-        layoutL.addRow(QLabel("上升时长:"), uptime)
-        layoutL.addRow(QLabel("测试时长:"), testtime)
+
+        layoutL.addRow(QLabel("用户数量:"), self.startArgs['customer'])
+        layoutL.addRow(QLabel("初始天数:"), self.startArgs['initialdays'])
+        layoutL.addRow(QLabel("比例因子:"), self.startArgs['scalefactor'])
+        layoutL.addRow(QLabel("上升时长:"), self.startArgs['uptime'])
+        layoutL.addRow(QLabel("测试时长:"), self.startArgs['testtime'])
         layoutL.addRow(QLabel("数据库配置:"))
-        layoutL.addRow(QLabel("IP地址:"), dbip)
-        layoutL.addRow(QLabel("端口号:"), dbport)
-        layoutL.addRow(QLabel("用户名:"), dbusername)
-        layoutL.addRow(QLabel("密码:"), dbpassword)
-        layoutL.addRow(QLabel("数据库实例:"), dbname)
-        layoutL.addRow(QLabel("数据库类别:"), dbtype)
+        layoutL.addRow(QLabel("IP地址:"), self.startArgs['dbconfig']['ip'])
+        layoutL.addRow(QLabel("端口号:"), self.startArgs['dbconfig']['port'])
+        layoutL.addRow(QLabel("用户名:"), self.startArgs['dbconfig']['username'])
+        layoutL.addRow(QLabel("密码:"), self.startArgs['dbconfig']['password'])
+        layoutL.addRow(QLabel("数据库实例名:"), self.startArgs['dbconfig']['dbname'])
+        layoutL.addRow(QLabel("数据库类别:"), self.startArgs['dbconfig']['dbtype'])
+
+
+        # 设置信号糟，当行内容修改结束时进行修改
+        self.startArgs['customer'].textEdited.connect(self.modify_startArgs)     
+        self.startArgs['initialdays'].textEdited.connect(self.modify_startArgs)  
+        self.startArgs['scalefactor'].textEdited.connect(self.modify_startArgs)  
+        self.startArgs['uptime'].textEdited.connect(self.modify_startArgs)  
+        self.startArgs['testtime'].textEdited.connect(self.modify_startArgs)  
+
+        self.startArgs['dbconfig']['ip'].textEdited.connect(self.modify_startArgs)
+        self.startArgs['dbconfig']['port'].textEdited.connect(self.modify_startArgs)
+        self.startArgs['dbconfig']['username'].textEdited.connect(self.modify_startArgs)
+        self.startArgs['dbconfig']['password'].textEdited.connect(self.modify_startArgs)
+        self.startArgs['dbconfig']['dbname'].textEdited.connect(self.modify_startArgs)
+        self.startArgs['dbconfig']['dbtype'].textEdited.connect(self.modify_startArgs)
 
         layoutR = QHBoxLayout()
-        agent = {
+        self.agent = {
         "ip": QLineEdit(),
         "port": QLineEdit(),
         "concurrency": QLineEdit(),
@@ -172,27 +218,38 @@ class TPCEAutoRunnerUI(QDialog):
         "delay": QLineEdit()
         }
 
+
         agentBox = QWidget()
         agent_layout = QFormLayout()
         agent_layout.addRow(QLabel("TPCEAgent配置:"))
-        agent_layout.addRow(QLabel("IP地址:"), agent['ip'])
-        agent_layout.addRow(QLabel("端口号:"), agent['port'])
-        agent_layout.addRow(QLabel("并发数:"), agent['concurrency'])
-        agent_layout.addRow(QLabel("实例数:"), agent['instance'])
-        agent_layout.addRow(QLabel("起始id:"), agent['startid'])
-        agent_layout.addRow(QLabel("终止id:"), agent['endid'])
-        agent_layout.addRow(QLabel("延迟:"), agent['delay'])
+        agent_layout.addRow(QLabel("IP地址:"), self.agent['ip'])
+        agent_layout.addRow(QLabel("端口号:"), self.agent['port'])
+        agent_layout.addRow(QLabel("并发数:"), self.agent['concurrency'])
+        agent_layout.addRow(QLabel("实例数:"), self.agent['instance'])
+        agent_layout.addRow(QLabel("起始id:"), self.agent['startid'])
+        agent_layout.addRow(QLabel("终止id:"), self.agent['endid'])
+        agent_layout.addRow(QLabel("延迟:"), self.agent['delay'])
         agentBox.setLayout(agent_layout)
 
 
-        listAgent = QListWidget()
-        listAgent.resize(300,120)
-        listAgent.addItem('新建TPCEAgent')
-        listAgent.addItem('Agent1')
-        listAgent.itemClicked.connect(self.create_agent)
+        self.listAgent = QListWidget()
+        self.listAgent.resize(50, 300)
+        self.listAgent.setStyleSheet("QListWidget{color:rgb(0,0,0); background:rgb(255,255,255);border:0px solid gray;}"
+                                     "QListWidget::Item{height:40px;border:0px solid gray;padding-left:0;color:rgb(0,0,0);}"
+                                     "QListWidget::Item:hover{color:rgb(0,200,200);border:0px solid gray;}"
+                                     "QListWidget::Item:{color:rgb(0,0,0);border:0px solid gray;}"
+                                     "QListWidget::Item:selected:active{background:rgb();color:rgb(0,0,0);border-width:0;}"
+                                     "QListWidget::Item[0]{color:rgb(255,0,0);border:0px solid gray;}"
+                                    )
+        self.listAgent.addItem('新建TPCEAgent')
+        #self.listAgent.setCurrentItem(self.listAgent.item(1))
 
+        self.init_agent()
 
-        layoutR.addWidget(listAgent)
+        self.listAgent.itemClicked.connect(self.add_agent)
+        self.listAgent.itemClicked.connect(self.select_agent)
+        
+        layoutR.addWidget(self.listAgent)
         layoutR.addWidget(agentBox)
                      
         startBox.addLayout(layoutL)
@@ -200,6 +257,7 @@ class TPCEAutoRunnerUI(QDialog):
 
         # 将startBox放入标签中
         startTab.setLayout(startBox)
+
         #------------configBox-------------
         configBox = QHBoxLayout()
 
@@ -230,26 +288,111 @@ class TPCEAutoRunnerUI(QDialog):
 
         configBox.addLayout(layoutLeft)
 
+        layoutRight = QHBoxLayout()
+
+        self.listdingdingUrl = QListWidget()
+        self.listdingdingUrl.addItem('新建钉钉地址')
+        self.listdingdingUrl.addItem('钉钉地址 1')
+        self.listdingdingUrl.itemClicked.connect(self.create_dingdingUrl) 
+
+        layoutRight.addWidget(self.listdingdingUrl)
+
+        dingdingUrlBox = QFormLayout()
+
+
+        configBox.addLayout(layoutRight)
+
         #将configBox放入标签中
         configTab.setLayout(configBox)
 
         mainTab.addTab(startTab, '启动参数')
         mainTab.addTab(configTab, '配置参数')
 
-
-
         mainLayout.addWidget(mainTab)
 
         self.settingBox.setLayout(mainLayout)
 
-    def create_agent(self, item):
+    def modify_startArgs(self):
+        logger.info('modify_startArgs!!')
+
+        self.start_map['customer'] = self.startArgs['customer'].text()
+        self.start_map['testtime'] = self.startArgs['testtime'].text()
+        self.start_map['initialdays'] = self.startArgs['initialdays'].text()
+        self.start_map['scalefactor'] = self.startArgs['scalefactor'].text()
+        self.start_map['uptime'] = self.startArgs['uptime'].text()
+
+        self.start_map['dbconfig']['ip'] = self.startArgs['dbconfig']['ip'].text()
+        self.start_map['dbconfig']['port'] = self.startArgs['dbconfig']['port'].text()
+        self.start_map['dbconfig']['dbname'] = self.startArgs['dbconfig']['dbname'].text()
+        self.start_map['dbconfig']['username'] = self.startArgs['dbconfig']['username'].text()
+        self.start_map['dbconfig']['dbtype'] = self.startArgs['dbconfig']['dbtype'].text()
+        self.start_map['dbconfig']['password'] = self.startArgs['dbconfig']['password'].text()
+
+
+    def init_agent(self):
+        for agent in self.start_map['agents']:
+            self.listAgent.addItem('Agent%d' % len(self.listAgent))
+
+    def add_agent(self, item):
         if item.text() == '新建TPCEAgent':
-            btn = self.sender()   # 获取到被点击的按钮
-            item.addItem('11')
+            self.listAgent.addItem('Agent%d' % len(self.listAgent))
+            new_agent = {
+                "ip": "",
+                "port": "",
+                "concurrency": "",
+                "instance": "",
+                "startid": "",
+                "endid": "",
+                "delay": ""
+            }
+            self.start_map['agents'].append(new_agent)
+
+    def select_agent(self, item):
+
+        if not item.text() == '新建TPCEAgent':
+            agentid = int(item.text()[-1:]) - 1 
+
+            self.agent['ip'].setText(str(self.start_map['agents'][agentid]['ip']))
+            self.agent['port'].setText(str(self.start_map['agents'][agentid]['port']))
+            self.agent['concurrency'].setText(str(self.start_map['agents'][agentid]['concurrency']))
+            self.agent['instance'].setText(str(self.start_map['agents'][agentid]['instance']))
+            self.agent['startid'].setText(str(self.start_map['agents'][agentid]['startid']))
+            self.agent['endid'].setText(str(self.start_map['agents'][agentid]['endid']))
+            self.agent['delay'].setText(str(self.start_map['agents'][agentid]['delay']))
+
+        # 当输入数据后，且切换行和退出时进行存储
+        self.agent['ip'].textEdited.connect(self.modify_agent)
+        self.agent['port'].textEdited.connect(self.modify_agent)
+        self.agent['concurrency'].textEdited.connect(self.modify_agent)
+        self.agent['instance'].textEdited.connect(self.modify_agent)
+        self.agent['startid'].textEdited.connect(self.modify_agent)
+        self.agent['endid'].textEdited.connect(self.modify_agent)
+        self.agent['delay'].textEdited.connect(self.modify_agent)
 
 
 
-    def create_reportBox(self):
+    def modify_agent(self):
+        logger.info(self.listAgent.currentItem().text())
+        currentItem = self.listAgent.currentItem()
+        if not currentItem.text() == '新建TPCEAgent':
+            agentid = int(currentItem.text()[5:]) - 1 
+        
+            self.start_map['agents'][agentid]['ip'] = self.agent['ip'].text()
+            self.start_map['agents'][agentid]['port'] = self.agent['port'].text()
+            self.start_map['agents'][agentid]['concurrency'] = self.agent['concurrency'].text()
+            self.start_map['agents'][agentid]['instance'] = self.agent['instance'].text()
+            self.start_map['agents'][agentid]['startid'] = self.agent['startid'].text()
+            self.start_map['agents'][agentid]['endid'] = self.agent['endid'].text()
+            self.start_map['agents'][agentid]['delay'] = self.agent['delay'].text()
+
+
+
+
+    def create_dingdingUrl(self, item):
+        if item.text() == '新建钉钉地址':
+            self.listdingdingUrl.addItem('钉钉地址 %d' % len(self.listdingdingUrl))
+
+    def init_reportBox(self):
         layout = QHBoxLayout()
         tab_list = QTabWidget()
 
@@ -269,7 +412,7 @@ class TPCEAutoRunnerUI(QDialog):
         self.reportBox.setLayout(layout)
         
 
-    def create_plotBox(self):
+    def init_plotBox(self):
         layout = QVBoxLayout()
 
         m = PlotCanvas(self)
