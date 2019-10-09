@@ -10,23 +10,22 @@ import PyQt5.QtGui as QtGui
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
-from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
-from matplotlib.figure import Figure
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FC
 import random
-from TPCEAutoRunner import logger , TPCEAutoRunner, TPSEPlot
+from log import logger
+from TPCEAutoRunner import tpceautorunner
 
 def load_json(fpath):
     with open(fpath,'r', encoding='utf-8') as f:
         dict_data = json.loads(f.read())
     return dict_data
 
-class TPCEAutoRunnerUI(QDialog):
-
+class TPSEPlot(QDialog):
 
     def __init__(self):
-        super(TPCEAutoRunnerUI, self).__init__()
-
-
+        super(TPSEPlot, self).__init__()
 
         self.start_map = load_json('start.json')
         self.config_map = load_json('config.json')
@@ -421,42 +420,123 @@ class TPCEAutoRunnerUI(QDialog):
     def init_plotBox(self):
         layout = QVBoxLayout()
 
-        m = TPSEPlot(self)
+        #m = TPSEPlot(self)
+        self.plt = plt
+        self.fig = plt.figure(num=1, figsize=(15, 8),dpi=80)  
+        self.canvas = FC(self.fig)
+        layout.addWidget(self.canvas)
 
-        layout.addWidget(m)
 
         self.plotBox.setLayout(layout)
 
     def start_clicked(self,item):
         if item.text() == '启动':
             logger.info('点击了启动item，开始启动 ～～')
+
             d = TPCEAutoRunner()
             d.run()
-            # 当获得循环完毕的信号时，停止计数
-            # work.trigger.connect(timeStop)
+            # # 当获得循环完毕的信号时，停止计数
+            # # work.trigger.connect(timeStop)
     def display(self,i):
         #设置当前可见的选项卡的索引
         self.stack.setCurrentIndex(i)
 
-class PlotCanvas(FigureCanvas):
+    def drawLine(self, linePoint, textPoint , text, color="Blue"):
+        '''
+        linePoint: 线顶点坐标 (x, y)
+        textPoint: 文本坐标 (x, y)
+        text: 文本标注
+        color: 线颜色
+        '''
+        plt.annotate("",
+        xy = linePoint,
+        xytext = (linePoint[0], 0),
+        arrowprops = dict( arrowstyle = '-', color = color)
+        )
+        bbox_props = dict(boxstyle = "round", fc = "w", ec = "0.5", alpha = 0)
+        plt.text(textPoint[0], textPoint[1], "%s" % text, ha = "center", va = "center", size = 10,
+            bbox = bbox_props)
 
-    def __init__(self, parent=None):
-        fig = Figure(figsize=(5, 4), dpi=100)
-        self.axes = fig.add_subplot(111)
+    def drawArrow(self, arrowPoint, text, height, color="black"):
+        '''
+        arrowPoint: arrow顶点坐标 (x, y)
+        text: 文本标注
+        height: 箭头高度
+        color: 线颜色
+        '''
+        plt.annotate("",
+        xy = arrowPoint,
+        xytext = (arrowPoint[0], arrowPoint[1] - height),
+        arrowprops = dict( arrowstyle = 'simple, head_width = 1, head_length = 1', color = color)
+        )
+        bbox_props = dict(boxstyle = "round", fc = "w", ec = "0.5", alpha = 0)
+        plt.text(arrowPoint[0], arrowPoint[1] - height - 0.2, "%s" % text, ha = "center", va = "center", size = 10,
+        bbox = bbox_props)
 
-        FigureCanvas.__init__(self, fig)
-        self.setParent(parent)
-        x = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-        y = list()
-        for i in x:
-            y.append(random.random()*100)
 
-        self.axes.plot(x,y)
+    def plot(self, xData, yData):
+        self.plt.clf()
+        self.plt.title("Test Run Graph")
+        self.plt.xlabel("Elapsed Time in Minutes")
+        self.plt.ylabel("Trade-Result Transcations Per Second")
+        self.plt.plot(xData, yData)
+        self.canvas.draw()  # 在pyqt上的图像:从这里开始绘制
+        self.plt.axis([min(xData), max(xData), min(yData), max(yData) + 2])
+        self.plt.ioff()
 
+
+    def drawMIStartEnd(self, job):
+        self.drawLine((job.rampuptime(), job.tpsE() + 1), (job.rampuptime(), job.tpsE() + 1.5), "Begin Steady State")
+        self.drawLine((job.MIEnd() + 10, job.tpsE() + 1), (job.MIEnd() + 10, job.tpsE() + 1.5), "End Steady State")
+        self.drawArrow((job.MIStart(), job.tpsE() - 0.1), "MI Start", 3)
+        self.drawArrow((job.MIEnd(), job.tpsE() - 0.1), "MI End", 3)
+
+    # def show(self):
+    #     self.plt.show()
+
+    def close(self):
+        self.plt.close()
+
+    def savefig(self, path):
+        self.plt.savefig(path)
+
+
+    def handlePlot(self):
+        def actionShot():
+            self.lastPng = os.sep.join([tpceautorunner.paths["screenshots"], tpceautorunner.resultName(int(tpceautorunner.lastResultTime), "jpg")])
+            plt.savefig(self.lastPng)
+            logger.info(u'截图%s保存成功！' % self.lastPng)
+
+        while not is_exit:
+            try:
+                if self.isStarted and self.isGetResultSuccessed:
+                    _minCount = min(len(self.times),len(self.tpsEs))
+                    minCount  =  _minCount
+                    self.tpsePlot.plot(self.times[0:minCount], self.tpsEs[0:minCount])
+                    job = TwoHouerTradeResultJob.BestJob
+                    if job:
+                        self.tpsePlot.drawMIStartEnd(job)
+
+                    plt.pause(self.config["resultTime"])  #暂停一秒
+                    plt.ioff()
+                    logger.info(u'绘图更新成功！')
+                    if  len(self.tpsEs) > 0:
+                        actionShot()
+
+                    if is_exit:
+                        actionShot()
+
+            except Exception as e:
+                logger.error(traceback.format_exc(e))
+                logger.error(u'绘图更新失败')
+                logger.error(repr(e))
+
+        if self.isStarted:
+            actionShot()
 
 if __name__ == '__main__':
     app=QApplication(sys.argv)
-    demo=TPCEAutoRunnerUI()
+    demo=TPSEPlot()
     sys.exit(app.exec_())
     
 

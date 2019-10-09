@@ -1,62 +1,44 @@
 {
-    "customer": "customer",
-    "scalefactor": "scale",
-    "initialdays": "initdays",
     "testtime": "testime",
+    "initialdays": "initdays",
+    "dbconfig": {
+        "port": "port",
+        "password": "passwd",
+        "username": "uername",
+        "ip": "ip",
+        "dbname": "dbname",
+        "dbtype": "dbtype"
+    },
+    "customer": "customer11111",
+    "uptime": "uptime",
+    "scalefactor": "scale",
     "agents": [
         {
-            "delay": "1",
+            "port": "11111111111",
             "startid": "1111",
-            "concurrency": "1",
-            "ip": "1",
-            "port": "111111111",
-            "instance": "1",
-            "endid": "1"
+            "delay": "111111111",
+            "concurrency": "11111111111",
+            "ip": "111111111111111",
+            "instance": "1111111111",
+            "endid": "11111111"
         },
         {
-            "delay": "1",
-            "startid": "12221121",
-            "concurrency": "11111111",
-            "ip": "1",
-            "port": "11",
-            "instance": "1",
-            "endid": "1"
+            "port": "2222222222",
+            "startid": "222222222222",
+            "delay": "222222222",
+            "concurrency": "222222222",
+            "ip": "222222222",
+            "instance": "2222222222",
+            "endid": "2222222222"
         },
         {
-            "delay": "",
+            "port": "",
             "startid": "",
+            "delay": "",
             "concurrency": "",
             "ip": "",
-            "port": "",
             "instance": "",
-            "endid": ""
-        },
-        {
-            "delay": "",
-            "startid": "",
-            "concurrency": "",
-            "instance": "",
-            "port": "",
-            "ip": "",
-            "endid": ""
-        },
-        {
-            "delay": "",
-            "startid": "",
-            "concurrency": "",
-            "instance": "",
-            "port": "",
-            "ip": "",
             "endid": ""
         }
-    ],
-    "uptime": "uptime",
-    "dbconfig": {
-        "ip": "ip",
-        "username": "uername",
-        "port": "port",
-        "dbname": "dbname",
-        "dbtype": "dbtype",
-        "password": "passwd"
-    }
+    ]
 }
